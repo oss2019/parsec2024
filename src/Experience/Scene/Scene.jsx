@@ -7,7 +7,7 @@ export default function Scene() {
   return (
     <>
       <OrbitControls />
-      {/* <Perf /> */}
+      <Perf />
       <StaticParticles />
       <FBOMesh currentModel={"earth"} />
     </>

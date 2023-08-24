@@ -31,7 +31,7 @@ void main(){
   float strength = (sin(uTime * (vPointColor)) + 1.0) * 0.5;
 
   //float alpha = distance > 0.5 ? 0.0 : strength * 1.0 * ((0.5 - distance) * 2.0);
-  float alpha = distance > 0.5 ? 0.0 : (strength + 0.1) * 0.7;
+  float alpha = distance > 0.5 ? 0.0 : (strength + 0.1) * 0.2;
 
   gl_FragColor = vec4(colorCalc(vPointColor), alpha);
 }

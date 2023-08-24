@@ -72,7 +72,7 @@ function StaticParticles() {
     )
     pointRef.current.material.uniforms.uTime.value = state.clock.elapsedTime
 
-    pointRef.current.rotation.y += delta * 0.1
+    pointRef.current.rotation.y += delta * 0.015
     groupRef.current.rotation.x = lerp.current.y
     groupRef.current.rotation.y = lerp.current.x
   })
@@ -103,12 +103,17 @@ function StaticParticles() {
             uniforms={{
               maxPointSize: { value: 1.5 },
               uTime: { value: 0 },
-              uColor1: { value: new THREE.Color("#fc0e34") },
-              uColor2: { value: new THREE.Color("#ff0aef") },
-              uColor3: { value: new THREE.Color("#ffc000") },
+              uColor1: {
+                value: new THREE.Vector3(0.988 * 2, 0.055 * 2, 0.204 * 2),
+              },
+              uColor2: {
+                value: new THREE.Vector3(1 * 2, 0.039 * 2, 0.937 * 2),
+              },
+              uColor3: { value: new THREE.Vector3(1 * 2, 0.753 * 2, 0 * 2) },
             }}
             depthWrite={false}
             alphaTest={0.5}
+            toneMapped={false}
           />
         </points>
       </group>

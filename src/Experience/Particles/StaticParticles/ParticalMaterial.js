@@ -9,7 +9,9 @@ const StaticParticalMaterial = shaderMaterial(
     maxPointSize: 20.0,
   },
   vert,
-  frag
+  frag,
+  THREE.NoToneMapping,
+  THREE.AdditiveBlending
 )
 
 export { StaticParticalMaterial }

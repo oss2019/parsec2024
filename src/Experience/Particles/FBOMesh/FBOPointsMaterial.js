@@ -3,7 +3,7 @@ import * as THREE from "three"
 import fboPointsVertex from "../../Shaders/fboPointsVert.glsl"
 import fboPointsFragment from "../../Shaders/fboPointsFrag.glsl"
 
-export const FBOPointsMaterial = shaderMaterial(
+const FBOPointsMaterial = shaderMaterial(
   {
     uPositions: null,
     uColor: new THREE.Color("#FC06FF"),
@@ -15,3 +15,5 @@ export const FBOPointsMaterial = shaderMaterial(
   fboPointsVertex,
   fboPointsFragment
 )
+
+export { FBOPointsMaterial }

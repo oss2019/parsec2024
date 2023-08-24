@@ -144,7 +144,7 @@ function FBOMesh({ currentModel }) {
         </mesh>,
         scene
       )}
-      <points ref={points} position={[0, 0, 0]} scale={[1.5, 1.5, 1.5]}>
+      <points ref={points} position={[0, 0, 0]} scale={[1.7, 1.7, 1.7]}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
@@ -164,6 +164,7 @@ function FBOMesh({ currentModel }) {
           depthWrite={false}
           uModel1={modelIndex[model1State]}
           uModel2={modelIndex[model2State]}
+          toneMapped={false}
         />
       </points>
     </>
