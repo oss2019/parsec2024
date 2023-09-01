@@ -4,44 +4,41 @@ import { useGLTF, useFBO } from "@react-three/drei"
 import * as THREE from "three"
 import { surfaceSampler } from "./surfaceSampler"
 import { generateRandomnArray } from "./generateRandomArray"
-import { useControls, Leva } from "leva"
-import { bezier } from "@leva-ui/plugin-bezier"
 import { FBOPointsMaterial } from "./FBOPointsMaterial"
 import { FBOMeshMaterial } from "./FBOMeshMaterial"
+import GSAP from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
 extend({ FBOMeshMaterial })
 extend({ FBOPointsMaterial })
+GSAP.registerPlugin(ScrollTrigger)
 
-function FBOMesh({ currentModel }) {
+function FBOMesh() {
   const rocketMesh = useGLTF("/Models/rocket-v2.glb").nodes.RING
   const earthMesh =
     useGLTF("/Models/earth.glb").nodes
       .uploads_files_220341_Earth_Longi_Alti002_1
+  const landMesh = useGLTF("/Models/land.glb").nodes["Island2-House"]
 
   const fboMeshShaderRef = useRef()
   const points = useRef()
-  const startTimeRef = useRef(0)
   const size = 128
+
   const modelTextures = {
     rocket: useMemo(() => surfaceSampler(size, rocketMesh), [size]),
     earth: useMemo(() => surfaceSampler(size, earthMesh), [size]),
+    land: useMemo(() => surfaceSampler(size, landMesh), [size]),
   }
 
   const modelIndex = {
     rocket: 0,
     earth: 1,
+    land: 2,
   }
 
-  //controls
-  const { duration, curve } = useControls({
-    duration: {
-      value: 1.3,
-      min: 0,
-      max: 5,
-      step: 0.1,
-    },
-    curve: bezier([0.16, 1, 0.3, 1]),
-  })
+  const section1 = document.getElementById("sect-1")
+  const section2 = document.getElementById("sect-2")
+  const section3 = document.getElementById("sect-3")
 
   //Sub Render
   const scene = new THREE.Scene()
@@ -81,16 +78,10 @@ function FBOMesh({ currentModel }) {
   const [model1State, changeModel1State] = useState(null)
   const [model2State, changeModel2State] = useState(null)
 
-  function changingModels() {
-    startTimeRef.current = 0
-    changeModel2State(currentModel)
-  }
-
   useEffect(() => {
-    changingModels()
     points.current.material.transparent = true
-    points.current.material.blending = THREE.AdditiveBlending
-  }, [currentModel])
+    changeModel1State("earth")
+  }, [])
 
   useFrame((state, delta) => {
     const { gl, clock } = state
@@ -99,26 +90,81 @@ function FBOMesh({ currentModel }) {
     gl.render(scene, camera)
     gl.setRenderTarget(null)
 
-    if (startTimeRef.current === 0) {
-      startTimeRef.current = state.clock.elapsedTime
-    }
-
-    const elapsed = state.clock.elapsedTime - startTimeRef.current
-    const progress = curve.evaluate(Math.min(elapsed / duration, 1))
-
-    if (progress >= 1) {
-      changeModel1State(model2State)
-    }
-
     points.current.material.uniforms.uPositions.value = renderTarget.texture
     points.current.material.uniforms.uTime.value = state.clock.elapsedTime
-    fboMeshShaderRef.current.uniforms.uTransitionProgress.value = progress
-    points.current.material.uniforms.uTransitionProgress.value = progress
+    points.current.rotation.y += clock.elapsedTime * 0.00001
   })
+
+  //Morph particles on scroll 😍
+  useEffect(() => {
+    const ctx = GSAP.context(() => {
+      const timeline1 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: section1,
+          scroller: ".page-wrapper",
+          start: "bottom bottom-=200px",
+          end: "bottom top+=200px",
+          scrub: 1,
+          onUpdate: (self) => {
+            fboMeshShaderRef.current.uniforms.uTransitionProgress.value =
+              self.progress
+            points.current.material.uniforms.uTransitionProgress.value =
+              self.progress
+          },
+          onEnter: () => {
+            changeModel2State("rocket")
+          },
+          onLeave: () => {
+            changeModel1State("rocket")
+          },
+          onEnterBack: () => {
+            changeModel1State("earth")
+          },
+          onLeaveBack: () => {
+            changeModel2State("earth")
+          },
+        },
+      })
+    })
+    return () => ctx.revert()
+  }, [])
+
+  useEffect(() => {
+    const ctx = GSAP.context(() => {
+      const timeline2 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: section2,
+          scroller: ".page-wrapper",
+          start: "bottom bottom-=200px",
+          end: "bottom top+=200px",
+          scrub: 1,
+          onUpdate: (self) => {
+            fboMeshShaderRef.current.uniforms.uTransitionProgress.value =
+              self.progress
+            points.current.material.uniforms.uTransitionProgress.value =
+              self.progress
+          },
+          onEnter: () => {
+            changeModel2State("land")
+          },
+          onLeave: () => {
+            changeModel1State("land")
+          },
+          onEnterBack: () => {
+            changeModel1State("rocket")
+          },
+          onLeaveBack: () => {
+            changeModel2State("rocket")
+          },
+        },
+      })
+    })
+    return () => ctx.revert()
+  }, [])
 
   return (
     <>
-      <Leva hidden={true} />
+      {/* <Leva hidden={true} /> */}
       {createPortal(
         <mesh>
           <fBOMeshMaterial

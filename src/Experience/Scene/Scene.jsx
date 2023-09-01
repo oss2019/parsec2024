@@ -1,15 +1,22 @@
-import { OrbitControls } from "@react-three/drei"
 import StaticParticles from "../Particles/StaticParticles/StaticParticles"
 import FBOMesh from "../Particles/FBOMesh/FBOMesh.jsx"
 import { Perf } from "r3f-perf"
 
-export default function Scene() {
+export default function Scene({ currentMesh }) {
+  let componentToRender
+  switch (currentMesh) {
+    case "home":
+      componentToRender = <FBOMesh />
+      break
+    default:
+      componentToRender = <group />
+      break
+  }
   return (
     <>
-      <OrbitControls />
       <Perf />
       <StaticParticles />
-      <FBOMesh currentModel={"earth"} />
+      {componentToRender}
     </>
   )
 }

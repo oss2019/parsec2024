@@ -14,3 +14,10 @@
 .canvas {
   background-color: #000;
 }
+
+.page-wrapper {
+  position: relative;
+  height: 100vh;
+  z-index: 10;
+  overflow-y: scroll;
+}

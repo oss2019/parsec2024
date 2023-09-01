@@ -1,8 +1,9 @@
 import { Canvas } from "@react-three/fiber"
 import Scene from "./Scene/Scene"
 import { Effects } from "./Effects/Effects"
+import * as THREE from "three"
 
-export default function Experience() {
+export default function Experience({ current }) {
   return (
     <>
       <Canvas
@@ -10,11 +11,12 @@ export default function Experience() {
         camera={{ position: [0, 0, 5] }}
         gl={{
           powerPreference: "high-performance",
+          toneMapping: THREE.NoToneMapping,
         }}
         dpr={[1, 2]}
       >
         <Effects />
-        <Scene />
+        <Scene currentMesh={current} />
       </Canvas>
     </>
   )

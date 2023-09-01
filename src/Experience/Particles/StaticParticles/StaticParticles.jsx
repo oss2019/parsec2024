@@ -104,12 +104,14 @@ function StaticParticles() {
               maxPointSize: { value: 1.5 },
               uTime: { value: 0 },
               uColor1: {
-                value: new THREE.Vector3(0.988 * 2, 0.055 * 2, 0.204 * 2),
+                value: new THREE.Vector3(0.988 * 1.5, 0.055 * 1.5, 0.204 * 1.5),
               },
               uColor2: {
-                value: new THREE.Vector3(1 * 2, 0.039 * 2, 0.937 * 2),
+                value: new THREE.Vector3(1 * 1.5, 0.039 * 1.5, 0.937 * 1.5),
               },
-              uColor3: { value: new THREE.Vector3(1 * 2, 0.753 * 2, 0 * 2) },
+              uColor3: {
+                value: new THREE.Vector3(1 * 1.5, 0.753 * 1.5, 0 * 1.5),
+              },
             }}
             depthWrite={false}
             alphaTest={0.5}

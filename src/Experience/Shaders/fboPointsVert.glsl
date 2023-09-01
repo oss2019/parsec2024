@@ -13,5 +13,9 @@ void main() {
 
   vec4 mvPosition = modelViewMatrix * vec4( pos, 1.0 );
   gl_Position = projectionMatrix * mvPosition;
-  gl_PointSize = 10.0 / -mvPosition.z;
+  // Calculate the point size based on the depth (z component),
+  // but apply an exponential function to control the size increase gradient.
+  float distanceToCamera = length(mvPosition.xyz);
+  float adjustedPointSize = 40.0 * pow(2.0, -distanceToCamera);
+  gl_PointSize = adjustedPointSize;
 }

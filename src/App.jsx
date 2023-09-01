@@ -1,10 +1,8 @@
-import Experience from "./Experience/Experience"
+import Views from "./Views"
 function App() {
   return (
     <>
-      <div className="experience">
-        <Experience />
-      </div>
+      <Views />
     </>
   )
 }
