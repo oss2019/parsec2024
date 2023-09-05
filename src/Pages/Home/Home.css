@@ -1,0 +1,43 @@
+.section-main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.hero-content-wrapper {
+  position: absolute;
+  display: flex;
+  max-width: 600px;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-main h1 {
+  font-size: 4rem;
+}
+
+.hero-quote-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.style-quote-bar {
+  height: 2px;
+  width: 80px;
+  background-color: var(--primary-color);
+  margin: 0 8px;
+}
+
+.buffer-space {
+  width: 100%;
+  height: 2000px;
+}
+
+@media (max-width: 900px) {
+  .hero-main h1 {
+    font-size: 3rem;
+  }
+}

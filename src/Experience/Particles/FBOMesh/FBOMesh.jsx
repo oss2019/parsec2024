@@ -22,6 +22,7 @@ function FBOMesh() {
 
   const fboMeshShaderRef = useRef()
   const points = useRef()
+  const group = useRef()
   const size = 128
 
   const modelTextures = {
@@ -36,9 +37,10 @@ function FBOMesh() {
     land: 2,
   }
 
-  const section1 = document.getElementById("sect-1")
-  const section2 = document.getElementById("sect-2")
+  const section1 = document.getElementById("hero-section-1")
+  const section2 = document.getElementById("hero-section-2")
   const section3 = document.getElementById("sect-3")
+  const animate2 = document.getElementById("home-animate-2")
 
   //Sub Render
   const scene = new THREE.Scene()
@@ -92,7 +94,6 @@ function FBOMesh() {
 
     points.current.material.uniforms.uPositions.value = renderTarget.texture
     points.current.material.uniforms.uTime.value = state.clock.elapsedTime
-    points.current.rotation.y += clock.elapsedTime * 0.00001
   })
 
   //Morph particles on scroll 😍
@@ -102,8 +103,8 @@ function FBOMesh() {
         scrollTrigger: {
           trigger: section1,
           scroller: ".page-wrapper",
-          start: "bottom bottom-=200px",
-          end: "bottom top+=200px",
+          start: "bottom bottom-=100px",
+          end: "bottom top+=100px",
           scrub: 1,
           onUpdate: (self) => {
             fboMeshShaderRef.current.uniforms.uTransitionProgress.value =
@@ -162,9 +163,57 @@ function FBOMesh() {
     return () => ctx.revert()
   }, [])
 
+  //particles mesh movement 😍💕
+  useEffect(() => {
+    const ctx = GSAP.context(() => {
+      let mm = GSAP.matchMedia()
+      const timeline1 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: section1,
+          scroller: ".page-wrapper",
+          start: "bottom bottom-=100px",
+          end: "bottom top+=100px",
+          scrub: 1,
+        },
+      })
+      timeline1
+        .to(points.current.rotation, {
+          y: 0.5 * Math.PI,
+        })
+        .to(group.current.rotation, {
+          x: 0.5,
+          z: 0.5,
+        })
+      mm.add("(min-width:900px)", () => {
+        timeline1.to(group.current.position, {
+          x: 3,
+        })
+      })
+
+      const timeline2 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: animate2,
+          scroller: ".page-wrapper",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1,
+        },
+      })
+      timeline2
+        .to(points.current.rotation, {
+          y: 4 * Math.PI,
+        })
+        .to(group.current.position, {
+          x: -10 * Math.cos(0.5) * Math.sin(0.5),
+          y: 10 * Math.cos(0.5) * Math.cos(0.5),
+          z: 10 * Math.sin(0.5),
+        })
+    })
+    return () => ctx.revert()
+  }, [])
+
   return (
     <>
-      {/* <Leva hidden={true} /> */}
       {createPortal(
         <mesh>
           <fBOMeshMaterial
@@ -172,6 +221,7 @@ function FBOMesh() {
             key={FBOMeshMaterial.key}
             positionsA={modelTextures[model1State]}
             positionsB={modelTextures[model2State]}
+            toneMapped={false}
           />
           <bufferGeometry>
             <bufferAttribute
@@ -190,29 +240,31 @@ function FBOMesh() {
         </mesh>,
         scene
       )}
-      <points ref={points} position={[0, 0, 0]} scale={[1.7, 1.7, 1.7]}>
-        <bufferGeometry>
-          <bufferAttribute
-            attach="attributes-position"
-            count={particlesPosition.length / 3}
-            array={particlesPosition}
-            itemSize={3}
+      <group ref={group}>
+        <points ref={points} position={[0, 0, 0]} scale={[1.7, 1.7, 1.7]}>
+          <bufferGeometry>
+            <bufferAttribute
+              attach="attributes-position"
+              count={particlesPosition.length / 3}
+              array={particlesPosition}
+              itemSize={3}
+            />
+            <bufferAttribute
+              attach="attributes-aRandom"
+              count={randomnessArray.length / 3}
+              array={randomnessArray}
+              itemSize={3}
+            />
+          </bufferGeometry>
+          <fBOPointsMaterial
+            key={FBOPointsMaterial.key}
+            depthWrite={false}
+            uModel1={modelIndex[model1State]}
+            uModel2={modelIndex[model2State]}
+            toneMapped={false}
           />
-          <bufferAttribute
-            attach="attributes-aRandom"
-            count={randomnessArray.length / 3}
-            array={randomnessArray}
-            itemSize={3}
-          />
-        </bufferGeometry>
-        <fBOPointsMaterial
-          key={FBOPointsMaterial.key}
-          depthWrite={false}
-          uModel1={modelIndex[model1State]}
-          uModel2={modelIndex[model2State]}
-          toneMapped={false}
-        />
-      </points>
+        </points>
+      </group>
     </>
   )
 }

@@ -1,6 +1,7 @@
 import Experience from "../Experience/Experience"
 import { useLocation } from "react-router-dom"
 import { Outlet } from "react-router-dom"
+import Appbar from "../Components/Appbar/Appbar"
 
 function Layout() {
   const location = useLocation()
@@ -18,6 +19,7 @@ function Layout() {
         <Experience current={getRouteName()} />
       </div>
       <div className="page-wrapper">
+        <Appbar current={getRouteName()} />
         <Outlet />
       </div>
     </>
