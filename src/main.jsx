@@ -4,6 +4,10 @@ import { BrowserRouter } from "react-router-dom"
 import App from "./App.jsx"
 import "./index.css"
 
+export const metadata = {
+  title: 'Parsec 2024',
+}
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
