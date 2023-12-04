@@ -2,6 +2,7 @@ import Experience from "../Experience/Experience"
 import { useLocation } from "react-router-dom"
 import { Outlet } from "react-router-dom"
 import Appbar from "../Components/Appbar/Appbar"
+import useLocoScroll from "../Helpers/locomotive"
 
 function Layout() {
   const location = useLocation()
@@ -13,14 +14,20 @@ function Layout() {
     return segments[segments.length - 1]
   }
 
+  useLocoScroll(true)
+
   return (
     <>
       <div className="experience">
         <Experience current={getRouteName()} />
       </div>
-      <div className="page-wrapper">
+      <div>
         <Appbar current={getRouteName()} />
-        <Outlet />
+        <div id="main" className="page-wrapper">
+          <div id="main-content">
+            <Outlet />
+          </div>
+        </div>
       </div>
     </>
   )

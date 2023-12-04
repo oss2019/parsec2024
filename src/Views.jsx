@@ -7,7 +7,7 @@ const Views = () => {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route path="home" element={<Home />} />
-        <Route path="test" element={<Test />} />
+        <Route path="events" element={<Test />} />
       </Route>
       <Route index element={<Navigate to="/home" replace />} />
     </Routes>

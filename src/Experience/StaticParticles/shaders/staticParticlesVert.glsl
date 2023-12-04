@@ -10,7 +10,7 @@ void main(){
 
   // Adjust point size based on distance
   
-  gl_PointSize =  200.0 / distanceToCamera;
+  gl_PointSize =  200.0 / distanceToCamera + 5.0;
   vPointColor = pointColor;
 
   gl_Position = clipPosition;

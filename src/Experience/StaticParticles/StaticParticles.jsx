@@ -2,11 +2,11 @@ import { useMemo, useRef } from "react"
 import * as THREE from "three"
 import { useFrame, useThree } from "@react-three/fiber"
 import GSAP from "gsap"
-import vertexShader from "../../Shaders/staticParticlesVert.glsl"
-import fragmentShader from "../../Shaders/staticParticlesFrag.glsl"
+import vertexShader from "./shaders/staticParticlesVert.glsl"
+import fragmentShader from "./shaders/staticParticlesFrag.glsl"
 
 function StaticParticles() {
-  const count = 250
+  const count = 200
   const pointRef = useRef()
   const groupRef = useRef()
 
@@ -36,7 +36,7 @@ function StaticParticles() {
 
     for (let i = 0; i < count; ++i) {
       const randomAngle1 = Math.PI * (Math.random() - 0.5) * 2
-      const radius = 25
+      const radius = 20
       const randomAngle2 = Math.PI * (Math.random() - 0.5) * 2
       const x = radius * Math.cos(randomAngle1) * Math.sin(randomAngle2)
       const y = radius * Math.cos(randomAngle2)
@@ -72,7 +72,7 @@ function StaticParticles() {
     )
     pointRef.current.material.uniforms.uTime.value = state.clock.elapsedTime
 
-    pointRef.current.rotation.y += delta * 0.015
+    pointRef.current.rotation.y += delta * 0.03
     groupRef.current.rotation.x = lerp.current.y
     groupRef.current.rotation.y = lerp.current.x
   })
@@ -80,7 +80,7 @@ function StaticParticles() {
   return (
     <>
       <group ref={groupRef}>
-        <points ref={pointRef} position={[0, 0, -25]}>
+        <points ref={pointRef} position={[0, 0, -20]}>
           <bufferGeometry>
             <bufferAttribute
               attach="attributes-position"
@@ -104,13 +104,13 @@ function StaticParticles() {
               maxPointSize: { value: 1.5 },
               uTime: { value: 0 },
               uColor1: {
-                value: new THREE.Vector3(0.988 * 1.5, 0.055 * 1.5, 0.204 * 1.5),
+                value: new THREE.Color("#F31559"),
               },
               uColor2: {
-                value: new THREE.Vector3(1 * 1.5, 0.039 * 1.5, 0.937 * 1.5),
+                value: new THREE.Color("#6528F7"),
               },
               uColor3: {
-                value: new THREE.Vector3(1 * 1.5, 0.753 * 1.5, 0 * 1.5),
+                value: new THREE.Color("#FFB000"),
               },
             }}
             depthWrite={false}

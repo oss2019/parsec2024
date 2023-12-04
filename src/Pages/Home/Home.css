@@ -36,6 +36,14 @@
   height: 2000px;
 }
 
+.gradient-text {
+  background: linear-gradient(to right, #ff6600, #ffcc00);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 @media (max-width: 900px) {
   .hero-main h1 {
     font-size: 3rem;
