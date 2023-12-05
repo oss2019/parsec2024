@@ -1,8 +1,8 @@
-import { Routes, Route, Navigate } from "react-router-dom"
-import Layout from "./Pages/Layout"
-import Home from "./Pages/Home/Home"
-import Events from "./Pages/Events/Events"
-import Team from "./Pages/Team/Team"
+import { Routes, Route, Navigate } from "react-router-dom";
+import Layout from "./Pages/Layout";
+import Home from "./Pages/Home/Home";
+import Events from "./Pages/Events/Events";
+import Team from "./Pages/Team/Team";
 
 const Views = () => {
   return (
@@ -14,7 +14,7 @@ const Views = () => {
       </Route>
       <Route index element={<Navigate to="/home" replace />} />
     </Routes>
-  )
-}
+  );
+};
 
-export default Views
+export default Views;
