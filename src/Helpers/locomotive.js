@@ -3,7 +3,7 @@ import LocomotiveScroll from "locomotive-scroll"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
 
-const useLocoScroll = (start) => {
+const useLocoScroll = (start, route) => {
   gsap.registerPlugin(ScrollTrigger)
 
   useLayoutEffect(() => {
@@ -12,8 +12,8 @@ const useLocoScroll = (start) => {
     const scrollEl = document.querySelector("#main")
     let locoScroll = new LocomotiveScroll({
       el: scrollEl,
-      smooth: true,
-      multiplier: 1,
+      smooth: false,
+      multiplier: 0.4,
       lerp: 0.1,
     })
 
@@ -57,7 +57,7 @@ const useLocoScroll = (start) => {
         locoScroll = null
       }
     }
-  }, [start])
+  }, [start, route])
 }
 
 export default useLocoScroll

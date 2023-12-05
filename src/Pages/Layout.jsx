@@ -13,9 +13,7 @@ function Layout() {
     const segments = pathname.split("/")
     return segments[segments.length - 1]
   }
-
-  useLocoScroll(true)
-
+  useLocoScroll(true, getRouteName())
   return (
     <>
       <div className="experience">

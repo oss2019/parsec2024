@@ -31,7 +31,7 @@ function Appbar({ current }) {
     })
 
     return () => ctx.revert()
-  })
+  }, [current])
 
   return (
     <>
