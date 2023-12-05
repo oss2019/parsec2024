@@ -1,4 +1,3 @@
-import StaticParticles from "../StaticParticles/StaticParticles.jsx"
 import StaticParticlesV2 from "../StaticParticles/StaticParticlesV2.jsx"
 import Morph from "../MorphParticles/Morph.jsx"
 import { Perf } from "r3f-perf"
@@ -15,7 +14,7 @@ export default function Scene({ currentMesh }) {
   }
   return (
     <>
-      <Perf position="bottom-left" />
+      {/* <Perf position="bottom-left" /> */}
       {/* <StaticParticles /> */}
       <StaticParticlesV2 />
       {componentToRender}
