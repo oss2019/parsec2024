@@ -56,7 +56,7 @@ function Appbar({ current }) {
               </Link>
             </div>
             <div className="ml-4">
-              <Link to="/">
+              <Link to="/team">
                 <NavButton content="Team" isActive={current === "team"} />
               </Link>
             </div>

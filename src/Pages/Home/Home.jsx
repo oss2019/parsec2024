@@ -16,7 +16,7 @@ function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="max-w-[1000px] text-xl rounded-2xl mx-auto my-28 p-8 bg-black bg-opacity-60">
+            <div className="max-w-[1000px] text-xl rounded-2xl mx-auto my-28 p-8 bg-black bg-opacity-80">
               Witness the collision of genius minds and cutting-edge technology
               at IIT Dharwad's most electrifying{" "}
               <span className="gradient-text">Technical Fest - Parsec 4.0</span>
@@ -33,7 +33,7 @@ function Home() {
             <div className="w-full h-28"></div>
             <div className="w-full md:w-1/2">
               <div className="font-hero text-5xl">About us</div>
-              <div className="text-xl mt-4 rounded-2xl p-8 bg-black bg-opacity-60">
+              <div className="text-xl mt-4 rounded-2xl p-8 bg-black bg-opacity-80">
                 <div>
                   Parsec provides an excellent platform for aspiring
                   technologists to showcase their skills and serves as an ideal
