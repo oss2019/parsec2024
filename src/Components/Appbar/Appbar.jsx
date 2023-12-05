@@ -89,7 +89,7 @@ function Appbar({ current }) {
             </Link>
           </div>
           <div>
-            <Link to="/">
+            <Link to="/team">
               <NavTile content="Team" isActive={current === "team"} />
             </Link>
           </div>
