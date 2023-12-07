@@ -1,6 +1,7 @@
 uniform vec3 uColor1;
 uniform vec3 uColor2;
 uniform vec3 uColor3;
+uniform vec3 uColor4;
 
 vec3 angleMix(vec3 position){
   float pi = asin(1.0) * 2.0;
@@ -32,6 +33,16 @@ vec3 distanceMix(vec3 position){
 }
 
 
+vec3 logoMix(vec3 position){
+  float dist = distance(position, vec3(0));
+  if(dist > 0.21){
+    return uColor4;
+  }else{
+    return uColor3;
+  }
+}
+
+
 vec3 model_color(int model_index, vec3 position, float time)
 {
   if(model_index == 0){
@@ -39,6 +50,9 @@ vec3 model_color(int model_index, vec3 position, float time)
   }
   if(model_index == 1){
     return distanceMix(position);
+  }
+  if(model_index == 2){
+    return logoMix(position);
   }
   vec3 color = uColor;
   return color;

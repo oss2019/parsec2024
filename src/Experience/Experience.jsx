@@ -11,7 +11,6 @@ export default function Experience({ current }) {
         className="canvas"
         gl={{
           alpha: true,
-          powerPreference: "default",
           toneMapping: THREE.ACESFilmicToneMapping,
           outputColorSpace: THREE.SRGBColorSpace,
         }}

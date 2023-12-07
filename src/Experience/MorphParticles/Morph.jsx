@@ -12,12 +12,14 @@ GSAP.registerPlugin(ScrollTrigger)
 function Morph() {
   const rocketMesh = useGLTF("/Models/rocket.glb").nodes["Rocket"]
   const earthMesh = useGLTF("/Models/earth.glb").nodes["earth"]
-  const cryoMesh = useGLTF("Models/cryo.glb").nodes["Cryo"]
+  const logoMesh = useGLTF("/Models/iitdhLogo.glb").nodes["path12"]
 
-  const meshes = [earthMesh, rocketMesh, cryoMesh]
+  const meshes = [earthMesh, rocketMesh, logoMesh]
   const section1 = document.getElementById("animate-1")
   const section2 = document.getElementById("animate-2")
   const section3 = document.getElementById("animate-3")
+  const section5 = document.getElementById("animate-5")
+  const section6 = document.getElementById("animate-6")
 
   const morphRef = useRef()
   const localRef = useRef()
@@ -78,37 +80,37 @@ function Morph() {
     }
   }, [])
 
-  // useEffect(() => {
-  //   if (morphRef.current) {
-  //     const ctx = GSAP.context(() => {
-  //       const timeline1 = GSAP.timeline({
-  //         scrollTrigger: {
-  //           trigger: section2,
-  //           scroller: ".page-wrapper",
-  //           start: "bottom bottom-=100px",
-  //           end: "bottom top+=100px",
-  //           scrub: 1,
-  //           onUpdate: (self) => {
-  //             morphRef.current.updateProgress(self.progress)
-  //           },
-  //           onEnter: () => {
-  //             morphRef.current.setModelB(2)
-  //           },
-  //           onLeave: () => {
-  //             morphRef.current.setModelA(2)
-  //           },
-  //           onEnterBack: () => {
-  //             morphRef.current.setModelA(1)
-  //           },
-  //           onLeaveBack: () => {
-  //             morphRef.current.setModelB(1)
-  //           },
-  //         },
-  //       })
-  //     })
-  //     return () => ctx.revert()
-  //   }
-  // }, [])
+  useEffect(() => {
+    if (morphRef.current) {
+      const ctx = GSAP.context(() => {
+        const timeline6 = GSAP.timeline({
+          scrollTrigger: {
+            trigger: section6,
+            scroller: "#main",
+            start: "top bottom",
+            end: "bottom bottom",
+            scrub: 1,
+            onUpdate: (self) => {
+              morphRef.current.updateProgress(self.progress)
+            },
+            onEnter: () => {
+              morphRef.current.setModelB(2)
+            },
+            onLeave: () => {
+              morphRef.current.setModelA(2)
+            },
+            onEnterBack: () => {
+              morphRef.current.setModelA(1)
+            },
+            onLeaveBack: () => {
+              morphRef.current.setModelB(1)
+            },
+          },
+        })
+      })
+      return () => ctx.revert()
+    }
+  }, [])
 
   //mesh movement tweens
   useEffect(() => {
@@ -117,7 +119,9 @@ function Morph() {
       !localRef.current ||
       !section1 ||
       !section2 ||
-      !section3
+      !section3 ||
+      !section5 ||
+      !section6
     )
       return
     let mm = GSAP.matchMedia()
@@ -203,6 +207,69 @@ function Morph() {
           y: 10 * Math.cos(0.5) * Math.cos(0.5),
           z: 10 * Math.sin(0.5),
         })
+
+      const timeline5 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: section5,
+          scroller: "#main",
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+          onEnter: () => {
+            const mesh = morphRef.current.getPointsMesh()
+            mesh.rotation.y = Math.PI / 2
+          },
+        },
+      })
+
+      const timeline6 = GSAP.timeline({
+        scrollTrigger: {
+          trigger: section6,
+          scroller: "#main",
+          start: "top bottom",
+          end: "top top",
+          scrub: 1,
+        },
+      })
+
+      timeline5
+        .to(
+          globalRef.current.position,
+          {
+            x: 0,
+            y: 0,
+            z: 5.5,
+          },
+          3
+        )
+        .to(
+          globalRef.current.rotation,
+          {
+            x: 0,
+            y: 0,
+            z: 0,
+          },
+          3
+        )
+        .to(
+          localRef.current.rotation,
+          {
+            x: 0,
+            y: 0,
+            z: 0,
+          },
+          3
+        )
+
+      timeline6.to(
+        globalRef.current.position,
+        {
+          x: 0,
+          y: 0,
+          z: 0,
+        },
+        4
+      )
     })
     return () => {
       ctx.revert()
@@ -235,6 +302,7 @@ function Morph() {
               uColor1: new THREE.Color("#F31559"),
               uColor2: new THREE.Color("#6528F7"),
               uColor3: new THREE.Color("#FFB000"),
+              uColor4: new THREE.Color("#9333ea"),
             }}
             attributes={[
               {
@@ -257,6 +325,6 @@ function Morph() {
 }
 useGLTF.preload("/Models/rocket.glb")
 useGLTF.preload("/Models/earth.glb")
-useGLTF.preload("Models/cryo.glb")
+useGLTF.preload("Models/iitdhLogo.glb")
 
 export default Morph
