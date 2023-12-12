@@ -10,16 +10,19 @@ export default function Team() {
         <div className="teamsContentWrapper">
           <div className="teamHeaderWrapper">
             <div className="teamHeader">
-              <h1>Meet the Team</h1>
+              <h1 className="font-hero">Meet the Team</h1>
             </div>
           </div>
           {teamsData.map((team) => (
             <div key={team.name} className="teamContainer">
-              <h2>{team.name}</h2>
+              <h2 className="font-hero">{team.name}</h2>
               <div className="teamCardWrapper">
                 {team.members.map((member) => (
-                  <div key={member.name} className="teamCardContainer">
-                    <div key={member.name} className="teamCard">
+                  <div key={member.name} className="teamCardContainer ">
+                    <div
+                      key={member.name}
+                      className="teamCard backdrop-blur-sm bg-white bg-opacity-10"
+                    >
                       <div>
                         <img
                           src={prefix + member.image}
@@ -31,7 +34,7 @@ export default function Team() {
                         />
                       </div>
                       <div className="memberInfo">
-                        <h3>{member.name}</h3>
+                        <h3 style={{ font: "orbitron" }}>{member.name}</h3>
                         <div className="memberLinks">
                           <a
                             href={`mailto:${member.email}`}

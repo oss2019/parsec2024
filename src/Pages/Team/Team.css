@@ -59,7 +59,6 @@
 }
 
 .teamCard {
-  background-color: white;
   position: relative;
   width: 200px;
   height: 300px;
@@ -69,7 +68,7 @@
   box-shadow: 6px 6px 0 0 black;
   line-height: 1;
   max-width: 100%;
-  color: #000;
+  color: #fff;
   padding: 10px;
 }
 
@@ -94,7 +93,6 @@
 }
 
 .linkImageWrapper {
-  border: 2px solid black;
   padding: 4px;
   border-radius: 50%;
   transition: all 0.2s ease-out;
@@ -103,20 +101,4 @@
 .linkImageWrapper:hover {
   transform: translate(-5px, -5px);
   box-shadow: 2px 2px #000;
-}
-
-.email:hover {
-  background-color: #bb001b;
-}
-
-.linkedin:hover {
-  background-color: #0072b1;
-}
-
-.twitter:hover {
-  background-color: #00acee;
-}
-
-.instagram:hover {
-  background-color: #d62976;
 }

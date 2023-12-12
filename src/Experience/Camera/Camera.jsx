@@ -1,20 +1,18 @@
-import { useThree } from "@react-three/fiber"
 import { useEffect, useRef } from "react"
 import { PerspectiveCamera } from "@react-three/drei"
 function Camera() {
-  const { size } = useThree()
   const cameraRef = useRef()
   useEffect(() => {
     const resizeCamera = () => {
       if (cameraRef.current) {
-        if (size.width > 768) {
+        if (window.innerWidth > 768) {
           cameraRef.current.zoom = 1
-        } else if (size.width > 448) {
+        } else if (window.innerWidth > 448) {
           cameraRef.current.zoom = 0.8
         } else {
           cameraRef.current.zoom = 0.6
         }
-        cameraRef.current.aspect = size.width / size.height
+        cameraRef.current.aspect = window.innerWidth / window.innerHeight
       }
     }
     resizeCamera()
