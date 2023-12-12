@@ -34,7 +34,7 @@ export default function Team() {
                         />
                       </div>
                       <div className="memberInfo">
-                        <h3 className="font-hero">{member.name}</h3>
+                        <h3 style={{ font: "orbitron" }}>{member.name}</h3>
                         <div className="memberLinks">
                           <a
                             href={`mailto:${member.email}`}
