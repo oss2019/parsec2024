@@ -1,8 +1,33 @@
+import "./Events.css"
+import EventCard from "./EventCard/EventCard"
+import EventsData from "./data"
 function Events() {
+  const eventData = {
+    heading: "Event Heading",
+    content: "Event Content",
+    knowMoreLink: "https://example.com",
+    image:'Images/Eventimage.png' ,
+  };
   return (
-    <div className="mx-auto max-w-page_lg md:px-8 px-4 relative">
-      <div className="mt-24">Events</div>
-    </div>
+      <div className="relative main-wrapper">
+      <div className="main">
+                 <EventCard
+                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
+                    data={eventData} 
+                    number={1} 
+                  /> 
+                  <EventCard
+                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
+                    data={eventData} 
+                    number={2} 
+                  /> 
+                  <EventCard
+                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
+                    data={eventData} 
+                    number={3} 
+                  /> 
+        </div>
+      </div>            
   )
 }
 
