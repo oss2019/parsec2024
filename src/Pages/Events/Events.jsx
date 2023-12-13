@@ -6,28 +6,17 @@ function Events() {
     heading: "Event Heading",
     content: "Event Content",
     knowMoreLink: "https://example.com",
-    image:'Images/Eventimage.png' ,
-  };
+    image: "Images/Eventimage.png",
+  }
   return (
-      <div className="relative main-wrapper">
-      <div className="main">
-                 <EventCard
-                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
-                    data={eventData} 
-                    number={1} 
-                  /> 
-                  <EventCard
-                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
-                    data={eventData} 
-                    number={2} 
-                  /> 
-                  <EventCard
-                    leftSideImage='Images/Eventimage.png' // Example value for leftSideImage
-                    data={eventData} 
-                    number={3} 
-                  /> 
-        </div>
-      </div>            
+    <div className="relative mx-auto max-w-page_lg md:px-8 px-4 pt-32 overflow-x-hidden overflow-y-hidden">
+      <div className="font-hero text-center font-semibold text-4xl">Events</div>
+      <div className="mt-8">
+        <EventCard />
+        <EventCard flipLayout={true} />
+        <EventCard />
+      </div>
+    </div>
   )
 }
 

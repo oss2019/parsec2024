@@ -32,8 +32,8 @@ const Bot = () => {
         scrollTrigger: {
           trigger: section5,
           scroller: "#main",
-          start: "bottom bottom",
-          end: "bottom top",
+          start: "top top",
+          end: "bottom bottom",
           scrub: 1,
         },
       })

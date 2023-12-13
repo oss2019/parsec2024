@@ -35,7 +35,10 @@ function Appbar({ current }) {
 
   return (
     <>
-      <div className="container fixed top-0 left-0 z-10 max-w-full backdrop-blur-sm bg-black bg-opacity-10">
+      <div
+        className="container fixed top-0 left-0 max-w-full backdrop-blur-sm bg-black bg-opacity-10"
+        style={{ zIndex: 100 }}
+      >
         <div className="mx-auto max-w-page_lg flex items-center justify-between px-4 h-20">
           <div className="md:w-1/4">
             <img

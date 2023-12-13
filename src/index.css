@@ -16,6 +16,7 @@
 :root {
   --primary-color: #2390f7;
   --main: #27272a;
+  --default: hsl(240 4% 46%);
 }
 
 body {
@@ -42,12 +43,18 @@ body {
   left: 0;
 }
 
-/* .content-wrapper {
-  position: relative;
-  width: calc(100% - 160px);
-  margin: 0 auto;
-  max-width: 1300px;
-} */
+.event-block {
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .event-block {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    border-bottom-left-radius: 0;
+  }
+}
 
 @media (max-width: 900px) {
   .content-wrapper {
