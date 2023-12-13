@@ -1,8 +1,8 @@
 import { IoLocationSharp } from "react-icons/io5"
 import { FaClock } from "react-icons/fa6"
 
-export default function EventCard({ flipLayout = false, data, number }) {
-  return (
+export default function EventCard({ flipLayout = false,data,displayImage="/Images/mascot.png" }) {
+    return (
     <>
       <div className={`w-full flex my-12 ${flipLayout && "justify-end"}`}>
         {/**outer most full width container */}
@@ -21,29 +21,25 @@ export default function EventCard({ flipLayout = false, data, number }) {
               ></div>
               <div className="relative z-10">
                 <div className="font-hero font-semibold text-xl">
-                  Event Title
+                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-purple-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  {data.heading}
+                  </span>
+                  </button>
                 </div>
                 <div className="text-sm mt-2">
-                  Step into the world of robotics with Rovernomics! Join our
-                  exhilarating design competition and explore the vital role of
-                  CAD designing in robotics. Teams will craft crucial components
-                  for 3D printed robots, showcasing their innovation and
-                  problem-solving prowess. From seasoned experts to aspiring
-                  enthusiasts, Rovernomics invites you to unleash your
-                  creativity and gain practical experience in designing for
-                  robots. Get ready for an electrifying adventure that
-                  celebrates the fusion of technology and imagination!
+                  {data.content}
                 </div>
                 <div className="text-xs mt-4">
                   <div className="flex flex-wrap items-center">
                     <div>
                       <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
                         <IoLocationSharp />
-                        <span className="ml-2">Central Lecture theatre</span>
+                        <span className="ml-2">{data.location}</span>
                       </span>
                       <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
                         <FaClock />
-                        <span className="ml-2">29th Feb, 3:00 PM - 5:00PM</span>
+                        <span className="ml-2">{data.timing}</span>
                       </span>
                     </div>
                   </div>
@@ -52,7 +48,7 @@ export default function EventCard({ flipLayout = false, data, number }) {
                     <a>
                       <button
                         type="button"
-                        className="py-1 px-4 rounded-full font-hero text-sm font-semibold bg-gradient-to-r from-red-500 to-pink-500"
+                        className="py-1 px-4 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold "
                       >
                         Register
                       </button>
@@ -64,11 +60,11 @@ export default function EventCard({ flipLayout = false, data, number }) {
             <div
               className={`min-h-[300px] w-full sm:w-5/12 flex flex-col justify-center relative z-20 max-[640px]:rounded-b-xl sm:rounded-r-xl`}
               style={{
-                backgroundImage: `url(${"/Images/Eventimage.png"})`,
+                backgroundImage: `url(${"/Images/mascot.png"})`,
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center center",
                 backgroundSize: "cover",
-              }}
+              }} 
             ></div>
           </div>
         </div>

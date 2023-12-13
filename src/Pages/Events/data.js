@@ -1,101 +1,71 @@
 const data = [
     {
-      heading: "Toolset Unbounded",
+      heading: "DevHack 5.0",
       content:
-        "The problem Statement involves developing a GUI frontend with a user-friendly UI/UX. It includes a secure signup/login page with password/OTP protection. Implement a lossless image and text compression/decompression algorithms. Compressed images are stored in a secure database, and a file management system allows users to add/delete their images. You are free to choose various components, and exploration is encouraged.",
-      image: "/Events/IMAGE_CODING_CLUB_01.jpg",
-      knowMoreLink:
+        "DevHack 5.0, the next edition of the annual hackathon of IIT Dharwad is back - bigger, better and bolder! We have always believed that engineers and researchers have the power to revolutionize the world by transforming their inspiring ideas into solutions that positively impact society. Prove your worth in this 36-hour hackathon by ideating, innovating and hacking meaningful solutions to real life problems.",
+      image: "url('/Images/mascot.png')",
+      registrationLink:
         "https://drive.google.com/file/d/15gb-OIBMqm8VlWeJ3AOWYgFbwCTwLM4d/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
+
     },
     {
-      heading: "Alokin - Digital",
-      content: `You have to design a hardware module(i.e. come up with the
-        code) using the programming language- Verilog/VHDL with its
-        functionalities similar to those found in a Washing Machine
-        Controller.`,
-      image: "/Events/Alokin.jpeg",
-      knowMoreLink:
+      heading: "AlgoStrike 4.0",
+      content: `An algorithmic programming contest which tests your knowledge of various heuristic algorithms. The objective of the contest is that the participants have to formulate solutions to a multitude of fascinating engineering problems utilizing heuristic algorithms. Get set algo!`,
+      image: "url('/Images/mascot.png')",
+      registrationLink:
         "https://drive.google.com/file/d/1gYahKSXWV9wx5_pXfKa22FHRrT18kFV4/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
     {
-      heading: "Alokin - Analog",
-      content: `You have to a)Find out some parameters of NMOS and PMOS, b)Design a fully functional Operational Amplifier, which should meet certain specs in Ngspice simulator.`,
-      image: "/Events/Alokin_Analog.jpg",
-      knowMoreLink:
+      heading: "Stonkz 3.0",
+      content: `PARSEC 4.0, the annual technological symposium hosted by IIT Dharwad, presents Investor Summit the Mock Trading Competition—an intellectually challenging online mock-stock event meticulously designed to assess participants' investment acumen in the volatile financial markets. `,
+      image: "url('/Images/mascot.png')",
+      registrationLink:
         "https://drive.google.com/file/d/1UpLDai46hG_Xhu4E1YjxeHKwe82lXAaV/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
     {
-      heading: "AIWars: Conquer the Battlefield",
-      content: `The game of "Dots and Boxes" begins with an empty grid of dots. Players take turns adding a line of unit length between two unconnected dots. When a player completes the fourth side of a 1x1 box, they earn a point and get another turn. Your goal is to code a bot which performs good at the game.`,
+      heading: "AI Cure: Where AI Meets Healing Touch",
+      content: `AI is transforming disease detection by swiftly analyzing extensive datasets, enabling early identification, and enhancing healthcare outcomes. Machine learning algorithms, when trained
+      on comprehensive datasets, can discern subtle patterns and correlations that may elude human practitioners. The objective of this hackathon is to construct a machine-learning model to address such challenges.
+      `,
       image: "/Events/AIwars.jpg",
-      knowMoreLink:
+      registrationLink:
         "https://drive.google.com/file/d/1I-VS6n45cYAmGtECH3lCGQpSUYQzBIU-/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
     {
-      heading: "Drone Dash",
-      content: `An autonomous drone obstacle race! Designed to be a fantastic and fun way to get into robotic algorithms. We've designed it such that you'll learn a lot about robotic operating systems (ROS), robotic perception (computer vision) and autonomous control, all of which are not just key skills for robotics but also the hype these days!`,
+      heading: "Aurora: A Stellar Odyssey",
+      content: `Ahoy, fellow spacefarers! Ascend with us on a cosmic quest to unravel the mysteries plaguing the Deep Space Climate Observatory (DSCOVR)! Our mission? To crack the code behind its perplexing anomalies by crafting two separate models for predicting geomagnetic storms. But there's a twist – we'll be tackling this challenge using both raw and meticulously calibrated data sets, pushing the boundaries of our knowledge and ingenuity. We're even throwing in a bonus challenge for the truly audacious: devise innovative methods to transform raw data into valuable insights, unlocking secrets hidden within its depths. So, buckle up, sharpen your pencils, and prepare for an astronomical adventure in the realm of space weather forecasting!
+      `,
       image: "/Events/Drone_dash.jpg",
-      knowMoreLink:
+      registrationLink:
         "https://drive.google.com/file/d/1Y2tmllwBCiio3Tqv4EV_jyR7T0Q2UDQM/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
     {
-      heading: "Route.AI",
-      content: `AI, ML being the most used buzz words these days, this intriguing problem statement which requires you to come up with machine learning algorithms to predict the bus location based on the past data of bus routes, will help you learn, delve deeper in this field and is an opportunity to hone your creativity and skill sets!`,
+      heading: "Build-a-bot",
+      content: `Join us at IIT Dharwad for Build-a-bot, an electrifying robot buildathon during PARSEC 4.0, the annual techfest. Teams of 3-4 members will immerse themselves in a 36-hour challenge, designing, building, and programming a robot to tackle a surprise task revealed on the spot. The competition evaluates robots based on functionality, design, and innovation`,
       image: "/Events/Route_AI.jpg",
-      knowMoreLink:
+      registrationLink:
         "https://drive.google.com/file/d/14nf6hInkkpsOvk6v_oCVhfxwwvXXr1tw/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
     {
-      heading: "Rovernomics",
-      content: `Step into the world of robotics with Rovernomics! Join our exhilarating design competition and explore the vital role of CAD designing in robotics. Teams will craft crucial components for 3D printed robots, showcasing their innovation and problem-solving prowess. From seasoned experts to aspiring enthusiasts, Rovernomics invites you to unleash your creativity and gain practical experience in designing for robots. Get ready for an electrifying adventure that celebrates the fusion of technology and imagination!`,
+      heading: "FinTech Odyssey",
+      content: `Dive into the FinTech Odyssey, a dynamic event blending knowledge and adventure. In the TechFin Trivia Trek, teams of three navigate a 15-minute quiz, showcasing their FinTech acumen. Top 5 teams progress to the immersive TechFin Challenge Quest, delving into the intricacies of a FinTech company. Are you ready to chart the course for the future of finance? Join the Odyssey! `,
       image: "/Events/Rovernomics.jpg",
-      knowMoreLink:
+      registrationLink:
         "https://drive.google.com/file/d/1v5P_gvIA_YXFxLCZSGHlEbBF5xB9TGdI/view?usp=sharing",
-    },
-    {
-      heading: "Cosmoscope - Juniors",
-      content: `In the distant future, the state of the Earth is degrading.
-      Equipped with advanced space travel, humans have decided
-      to move Beyond the Horizon- searching for habitable
-      exoplanets. You are tasked with finding which stars are worth
-      exploring.`,
-      image: "/Events/cosmoscope_jr.jpg",
-      knowMoreLink:
-        "https://drive.google.com/file/d/1T27l-koc2PvY530UQcoWaVLxAdp6Aa4j/view?usp=sharing",
-    },
-    {
-      heading: "Cosmoscope - Seniors",
-      content: `The Sample Analysis at Mars (SAM) instrument is a key part
-      of NASA’s Curiosity rover mission to explore the red planet.
-      SAM’s main goal is to detect and analyze organic molecules
-      that contain carbon, such as methane, which are essential
-      for life as we know it. Your goal is to discover the existence of
-      specific chemical component families in
-      geological material samples using data
-      from Mars exploration missions and
-      constructing machine learning models.`,
-      image: "/Events/cosmoscope_sr.jpg",
-      knowMoreLink:
-        "https://drive.google.com/file/d/1_GTKtkzw_bR8IZH37onFoBRJIOGngVBz/view?usp=sharing",
-    },
-    {
-      heading: "Hack the trade",
-      content: `Price action trading is a strategy favored by day traders that
-      involves making decisions based on recent price movements
-      rather than relying on indicators or analysis. Common tools
-      include technical patterns, support and resistance levels,
-      candlestick patterns, and trend analysis.Develop automated tools for detecting price action signals such as technical patterns,
-      support and resistance levels, candlestick patterns, and trend analysis.`,
-      image: "/Events/stockmarketimage.jpg",
-      knowMoreLink:
-        "https://drive.google.com/file/d/1c8qUvDKzilgfZPjwe5jAKmab32ayNPK2/view?usp=sharing",
-    },
-    {
-      heading: "Bitwise Symphony",
-      content: `Unleash your algorithmic prowess, crafting a symphony from integers. Witness the mesmerizing rise of numbers, powered by bitwise sorcery. Seek the harmonies that transcend ordinariness, forging an ascending masterpiece. Dare you compose the ultimate melody, or chase the enigmatic crescendo? Enter the realm of Bitwise Symphony!.`,
-      image: "/Events/sar.png",
-      knowMoreLink:
-        "https://drive.google.com/file/d/1oYef04uoGGo2glUbUzRyPpaeH74GXIer/view?usp=sharing",
+      location: 'Central Lecture theatre',
+      timing:"29th Feb, 3:00 PM - 5:00PM",
     },
   ];
   
