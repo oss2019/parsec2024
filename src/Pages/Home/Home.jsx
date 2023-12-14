@@ -16,6 +16,7 @@ function Home() {
               <div>
                 <span className="gradient-text">IIT</span> Dharwad
               </div>
+              <div className="text-2xl mt-4">2nd Feb - 4th Feb, 2024</div>
             </div>
           </div>
           <div className="relative">
@@ -55,7 +56,8 @@ function Home() {
             </div>
             <div className="w-full h-28"></div>
           </div>
-          <div id="animate-3" className="w-full h-[1000px]"></div>
+          <div className="w-full h-[200px]" id="animate-3"></div>
+          <div className="w-full h-[800px]"></div>
         </section>
 
         <section className="relative">
@@ -75,7 +77,8 @@ function Home() {
         </section>
 
         <section className="relative">
-          <div id="animate-5" className="w-full h-[1000px]"></div>
+          <div id="animate-5" className="w-full h-[800px]"></div>
+          <div className="w-full h-[200px]"></div>
           <div id="animate-6">
             <div className="w-full relative">
               <div className="font-hero top-[50px] text-4xl text-center font-semibold relative max-[880px]:top-[348px]">

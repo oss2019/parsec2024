@@ -17,8 +17,6 @@
     "@studio-freight/lenis": "^1.0.29",
     "@types/three": "^0.157.0",
     "gsap": "^3.12.2",
-    "leva": "^0.9.35",
-    "locomotive-scroll": "^4.1.4",
     "next": "^14.0.3",
     "r3f-points-fx": "^1.0.4",
     "react": "^18.2.0",

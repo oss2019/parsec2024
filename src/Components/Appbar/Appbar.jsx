@@ -83,17 +83,29 @@ function Appbar({ current }) {
         >
           <div>
             <Link to="/home">
-              <NavTile content="Home" isActive={current === "home"} />
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Home"
+                isActive={current === "home"}
+              />
             </Link>
           </div>
           <div>
             <Link to="/events">
-              <NavTile content="Events" isActive={current === "events"} />
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Events"
+                isActive={current === "events"}
+              />
             </Link>
           </div>
           <div>
             <Link to="/team">
-              <NavTile content="Team" isActive={current === "team"} />
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Team"
+                isActive={current === "team"}
+              />
             </Link>
           </div>
         </div>
