@@ -43,12 +43,15 @@ export default function EventCard({ flipLayout = false, data }) {
                   </div>
 
                   <div className="mt-1">
-                    <a href={data.registrationLink}>
+                    <a href={data.registrationLink} target="_blank">
                       <button
                         type="button"
-                        className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold "
+                        className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold"
+                        disabled={data.registrationLink === ""}
                       >
-                        Register
+                        {data.registrationLink === ""
+                          ? "registrations soon..."
+                          : "Register"}
                       </button>
                     </a>
                   </div>

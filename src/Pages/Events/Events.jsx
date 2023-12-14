@@ -1,5 +1,4 @@
-import "./Events.css"
-import EventCard from "./EventCard/EventCard"
+import EventCard from "../../Components/EventCard/EventCard"
 import EventsData from "./data"
 function Events() {
   return (
