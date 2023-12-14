@@ -44,6 +44,21 @@
   color: transparent;
 }
 
+.pink-shadow {
+  box-shadow: rgba(219, 39, 119, 0.2) 0px 8px 24px,
+    rgba(219, 39, 119, 0.2) 0px 16px 56px, rgba(219, 39, 119, 0.2) 0px 24px 80px;
+}
+
+.yellow-shadow {
+  box-shadow: rgba(245, 158, 11, 0.2) 0px 8px 24px,
+    rgba(245, 158, 11, 0.2) 0px 16px 56px, rgba(245, 158, 11, 0.2) 0px 24px 80px;
+}
+
+.violet-shadow {
+  box-shadow: rgba(147, 51, 234, 0.2) 0px 8px 24px,
+    rgba(147, 51, 234, 0.2) 0px 16px 56px, rgba(147, 51, 234, 0.2) 0px 24px 80px;
+}
+
 @media (max-width: 900px) {
   .hero-main h1 {
     font-size: 3rem;

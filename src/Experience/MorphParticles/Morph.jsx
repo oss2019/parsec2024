@@ -45,6 +45,21 @@ function Morph() {
     return generateRandomnArray(128)
   }, [])
 
+  //movement curve for rocket
+  const curve = useMemo(() => {
+    return new THREE.CatmullRomCurve3([
+      new THREE.Vector3(
+        -10 * Math.cos(0.5) * Math.sin(0.5),
+        10 * Math.cos(0.5) * Math.cos(0.5),
+        10 * Math.sin(0.5)
+      ),
+      new THREE.Vector3(-2, 3.5, -4),
+      new THREE.Vector3(0, -3, -3),
+      new THREE.Vector3(0, -1, 0),
+      new THREE.Vector3(0, 0, 0),
+    ])
+  }, [])
+
   //particles transition timelines
   //first
   useEffect(() => {
@@ -89,7 +104,7 @@ function Morph() {
           scrollTrigger: {
             trigger: section6,
             scroller: "#main",
-            start: "top bottom",
+            start: "top bottom-=100px",
             end: "bottom bottom",
             scrub: 1,
             onUpdate: (self) => {
@@ -119,6 +134,7 @@ function Morph() {
     if (
       !globalRef.current ||
       !localRef.current ||
+      !morphRef.current ||
       !section1 ||
       !section2 ||
       !section3 ||
@@ -218,8 +234,27 @@ function Morph() {
           end: "top top",
           scrub: 1,
           onEnter: () => {
+            localRef.current.rotation.y = 0
+            localRef.current.rotation.x = Math.PI / 2
             const mesh = morphRef.current.getPointsMesh()
-            mesh.rotation.y = Math.PI / 2
+            mesh.rotation.y = 0
+          },
+          onLeaveBack: () => {
+            localRef.current.rotation.y = 4 * Math.PI
+            localRef.current.rotation.x = 0
+            globalRef.current.rotation.set(0.5, 0, 0.5)
+            globalRef.current.position.set(
+              -10 * Math.cos(0.5) * Math.sin(0.5),
+              10 * Math.cos(0.5) * Math.cos(0.5),
+              10 * Math.sin(0.5)
+            )
+          },
+          onUpdate: ({ progress }) => {
+            const position = curve.getPointAt(progress)
+            const tanget = curve.getTangentAt(progress).normalize()
+
+            globalRef.current.position.copy(position)
+            globalRef.current.lookAt(position.clone().add(tanget))
           },
         },
       })
@@ -228,50 +263,15 @@ function Morph() {
         scrollTrigger: {
           trigger: section6,
           scroller: "#main",
-          start: "top bottom",
-          end: "top top",
+          start: "top bottom-=100px",
+          end: "bottom bottom",
           scrub: 1,
         },
       })
 
-      timeline5
-        .to(
-          globalRef.current.position,
-          {
-            x: 0,
-            y: 0,
-            z: 7,
-          },
-          3
-        )
-        .to(
-          globalRef.current.rotation,
-          {
-            x: 0,
-            y: 0,
-            z: 0,
-          },
-          3
-        )
-        .to(
-          localRef.current.rotation,
-          {
-            x: 0,
-            y: 0,
-            z: 0,
-          },
-          3
-        )
-
-      timeline6.to(
-        globalRef.current.position,
-        {
-          x: 0,
-          y: 0,
-          z: 0,
-        },
-        4
-      )
+      timeline6.to(localRef.current.rotation, {
+        y: Math.PI / 2,
+      })
     })
     return () => {
       ctx.revert()

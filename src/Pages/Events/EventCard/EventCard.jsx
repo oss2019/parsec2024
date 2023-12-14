@@ -1,8 +1,8 @@
 import { IoLocationSharp } from "react-icons/io5"
 import { FaClock } from "react-icons/fa6"
 
-export default function EventCard({ flipLayout = false,data,displayImage="/Images/mascot.png" }) {
-    return (
+export default function EventCard({ flipLayout = false, data }) {
+  return (
     <>
       <div className={`w-full flex my-12 ${flipLayout && "justify-end"}`}>
         {/**outer most full width container */}
@@ -19,18 +19,16 @@ export default function EventCard({ flipLayout = false,data,displayImage="/Image
                   transform: "rotate(180deg)",
                 }}
               ></div>
-              <div className="relative z-10">
+              <div className="relative z-10 h-full">
                 <div className="font-hero font-semibold text-xl">
-                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-purple-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-                  <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                  {data.heading}
-                  </span>
+                  <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-purple-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                      {data.heading}
+                    </span>
                   </button>
                 </div>
-                <div className="text-sm mt-2">
-                  {data.content}
-                </div>
-                <div className="text-xs mt-4">
+                <div className="text-sm mt-2">{data.content}</div>
+                <div className="text-xs mt-4 relative bottom-0">
                   <div className="flex flex-wrap items-center">
                     <div>
                       <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
@@ -45,10 +43,10 @@ export default function EventCard({ flipLayout = false,data,displayImage="/Image
                   </div>
 
                   <div className="mt-1">
-                    <a>
+                    <a href={data.registrationLink}>
                       <button
                         type="button"
-                        className="py-1 px-4 text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold "
+                        className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold "
                       >
                         Register
                       </button>
@@ -58,14 +56,34 @@ export default function EventCard({ flipLayout = false,data,displayImage="/Image
               </div>
             </div>
             <div
-              className={`min-h-[300px] w-full sm:w-5/12 flex flex-col justify-center relative z-20 max-[640px]:rounded-b-xl sm:rounded-r-xl`}
-              style={{
-                backgroundImage: `url(${"/Images/mascot.png"})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center center",
-                backgroundSize: "cover",
-              }} 
-            ></div>
+              className="
+                  min-h-[300px] 
+                  w-full 
+                  sm:w-5/12
+                  relative
+                  max-[640px]:rounded-b-xl 
+                  sm:rounded-r-xl
+                  bg-gradient-to-tr
+                  from-pink-500
+                  to-amber-500
+                  p-4
+                "
+            >
+              <div
+                className="
+                  relative z-20 
+                  rounded-xl
+                  pt-[100%]
+                  h-full
+                "
+                style={{
+                  backgroundImage: `url(${data.image})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center center",
+                  backgroundSize: "cover",
+                }}
+              ></div>
+            </div>
           </div>
         </div>
       </div>

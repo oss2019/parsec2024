@@ -17,6 +17,9 @@ const useLenis = (route) => {
 
     const lenis = new Lenis({
       wrapper: scrollEl,
+      wheelMultiplier: 0.5,
+      touchMultiplier: 1,
+      smoothTouch: true,
     })
 
     lenis.on("scroll", ScrollTrigger.update)

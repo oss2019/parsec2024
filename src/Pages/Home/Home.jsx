@@ -5,7 +5,7 @@ import SponcerCard from "../../Components/Sponcers/SponcerCard"
 function Home() {
   return (
     <>
-      <div className="mx-auto max-w-page_lg md:px-8 px-4">
+      <div className="mx-auto max-w-page_lg md:px-8 px-4 overflow-hidden">
         <section id="animate-1">
           <div className="relative h-screen w-full">
             <div className="text-5xl mt-8 md:text-8xl max-[350px]:text-4xl md:mt-[-100px] font-semibold font-hero absolute top-1/2 left-0">
@@ -70,12 +70,6 @@ function Home() {
                 <SponcerCard imageUrl={"/Images/sponcers/github.png"} />
                 <SponcerCard imageUrl={"/Images/sponcers/codingNinjas.png"} />
               </Sponcer>
-              <Sponcer title={"Main Sponcers"}>
-                <SponcerCard imageUrl={"/Images/sponcers/nvidia.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/jetbrains.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/github.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/codingNinjas.png"} />
-              </Sponcer>
             </div>
           </div>
         </section>
@@ -83,28 +77,70 @@ function Home() {
         <section className="relative">
           <div id="animate-5" className="w-full h-[1000px]"></div>
           <div id="animate-6">
-            <div className="w-full h-screen relative">
-              <div className="top-2/3 absolute w-full left-0">
-                <div className="w-full font-hero text-5xl mt-8 md:text-8xl max-[350px]:text-4xl font-semibold">
-                  2nd Feb - 4th Feb 2024
+            <div className="w-full relative">
+              <div className="font-hero top-[50px] text-4xl text-center font-semibold relative max-[880px]:top-[348px]">
+                What you get
+              </div>
+              <div className="flex flex-wrap justify-around mt-96 px-8">
+                <div
+                  className="max-w-[400px] 
+                    rounded-lg 
+                    p-4 my-8 
+                    relative
+                    bg-pink-600
+                    pink-shadow
+                  "
+                >
+                  <div className="font-hero text-xl font-semibold text-center">
+                    Experience
+                  </div>
+                  <div className="mt-8 text-[1.1rem]">
+                    Participate in events designed to bring out the best in you
+                  </div>
+                </div>
+                <div
+                  className="
+                    max-w-[400px] 
+                    rounded-lg  
+                    p-4 
+                    my-8 
+                    relative 
+                    overflow-hidden
+                    bg-amber-500
+                    yellow-shadow
+                  "
+                >
+                  <div className="font-hero text-xl font-semibold text-center">
+                    Networking
+                  </div>
+                  <div className="mt-8 text-[1.1rem]">
+                    Connect with and exchange ideas with participants and also
+                    the tech speakers
+                  </div>
+                </div>
+                <div
+                  className="
+                    max-w-[400px] 
+                    rounded-lg 
+                    p-4 
+                    my-8 
+                    relative
+                    bg-violet-600
+                    violet-shadow 
+                  "
+                >
+                  <div className="font-hero text-xl font-semibold text-center">
+                    Goodies
+                  </div>
+                  <div className="mt-8 text-[1.1rem]">
+                    Each participant gets goodies! If you manage to win an
+                    event, you can get even better ones!
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="section-main">
-          <div className="hero-content-wrapper">
-            <div className="hero-main">
-              <h1>Lorem ipsum dolor sit amet</h1>
-              <div className={"hero-quote-wrapper"}>
-                <div className={"hero-quote"}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </div>
-              </div>
-            </div>
-          </div>
+          <div className="w-full h-[100px]"></div>
         </section>
       </div>
     </>

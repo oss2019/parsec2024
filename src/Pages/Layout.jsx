@@ -2,7 +2,7 @@ import Experience from "../Experience/Experience"
 import { useLocation } from "react-router-dom"
 import { Outlet } from "react-router-dom"
 import Appbar from "../Components/Appbar/Appbar"
-import useLocoScroll from "../Helpers/locomotive"
+import Footer from "../Components/Footer/Footer"
 import useLenis from "../Helpers/lenis"
 
 function Layout() {
@@ -28,6 +28,7 @@ function Layout() {
             <Outlet />
           </div>
         </div>
+        <Footer />
       </div>
     </>
   )

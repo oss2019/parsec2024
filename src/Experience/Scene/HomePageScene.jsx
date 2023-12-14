@@ -5,7 +5,6 @@ const HomePageScene = () => {
   return (
     <>
       <Morph />
-      <Bot />
     </>
   )
 }

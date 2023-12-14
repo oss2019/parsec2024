@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;400;500;700&family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -22,7 +23,7 @@
 body {
   color: #fff;
   background-color: #000;
-  font-family: "Inter", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 html,
@@ -46,6 +47,20 @@ body {
 .event-block {
   border-top-left-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
+}
+
+/*------------------Footer---------------------*/
+.footer a {
+  color: #a855f7;
+  transition: 0.5s ease-in-out;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  color: white;
 }
 
 @media (max-width: 640px) {
