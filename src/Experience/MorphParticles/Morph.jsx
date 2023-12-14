@@ -68,7 +68,7 @@ function Morph() {
         const timeline1 = GSAP.timeline({
           scrollTrigger: {
             trigger: section1,
-            scroller: ".page-wrapper",
+            scroller: "#main",
             start: "bottom bottom-=100px",
             end: "bottom top+=100px",
             scrub: 1,
@@ -168,7 +168,7 @@ function Morph() {
         scrollTrigger: {
           trigger: section3,
           scroller: "#main",
-          start: "top top",
+          start: "bottom bottom",
           end: "bottom top",
           scrub: 1,
         },
