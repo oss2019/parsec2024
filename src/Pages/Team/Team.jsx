@@ -10,7 +10,9 @@ export default function Team() {
         <div className="teamsContentWrapper">
           <div className="teamHeaderWrapper">
             <div className="teamHeader">
-              <h1 className="font-hero">Meet the Team</h1>
+              <h1 className="font-hero text-center font-semibold text-4xl">
+                Meet the Team
+              </h1>
             </div>
           </div>
           {teamsData.map((team) => (
@@ -41,7 +43,7 @@ export default function Team() {
                             className="linkImageWrapper email"
                           >
                             <img
-                              //   className={styles.linkImage}
+                              className="social-icon"
                               src={prefix + "/Team/Logo/gmail1.png"}
                               width={20}
                               height={20}
@@ -57,7 +59,7 @@ export default function Team() {
                               rel="noopener noreferrer"
                             >
                               <img
-                                // className={styles.linkImage}
+                                className="social-icon"
                                 src={prefix + "/Team/Logo/linkedin1.png"}
                                 width={20}
                                 height={20}
@@ -74,7 +76,7 @@ export default function Team() {
                               rel="noopener noreferrer"
                             >
                               <img
-                                // className={styles.linkImage}
+                                className="social-icon"
                                 src={prefix + "/Team/Logo/twitter1.png"}
                                 width={20}
                                 height={20}
@@ -90,7 +92,7 @@ export default function Team() {
                               rel="noopener noreferrer"
                             >
                               <img
-                                // className={styles.linkImage}
+                                className="social-icon"
                                 src={prefix + "/Team/Logo/instagram.png"}
                                 width={20}
                                 height={20}
