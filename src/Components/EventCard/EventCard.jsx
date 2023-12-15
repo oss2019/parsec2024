@@ -19,16 +19,19 @@ export default function EventCard({ flipLayout = false, data }) {
                   transform: "rotate(180deg)",
                 }}
               ></div>
-              <div className="relative z-10 h-full">
-                <div className="font-hero font-semibold text-xl">
-                  <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-purple-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-                    <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                      {data.heading}
-                    </span>
-                  </button>
+              <div className="relative z-10 h-full flex flex-col justify-between">
+                <div>
+                  <div className="font-hero font-semibold text-xl">
+                    <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-500 to-purple-400 group-hover:from-red-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+                      <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                        {data.heading}
+                      </span>
+                    </button>
+                  </div>
+                  <div className="text-sm mt-2">{data.content}</div>
                 </div>
-                <div className="text-sm mt-2">{data.content}</div>
-                <div className="text-xs mt-4 relative bottom-0">
+
+                <div className="text-xs mt-4">
                   <div className="flex flex-wrap items-center">
                     <div>
                       <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
@@ -46,7 +49,7 @@ export default function EventCard({ flipLayout = false, data }) {
                     <a href={data.registrationLink} target="_blank">
                       <button
                         type="button"
-                        className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 font-hero font-semibold"
+                        className=" text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 rounded-lg text-sm px-5 py-2.5 text-center font-hero font-semibold"
                         disabled={data.registrationLink === ""}
                       >
                         {data.registrationLink === ""
