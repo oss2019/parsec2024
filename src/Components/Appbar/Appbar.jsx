@@ -1,108 +1,121 @@
-import { useState, useEffect } from "react"
-import "./Appbar.css"
+import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
+import NavButton from "../NavButton/NavButton"
+import NavTile from "../NavTile/NavTile"
+import GSAP from "gsap"
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger"
+import { HiOutlineChevronDown } from "react-icons/hi"
+
+GSAP.registerPlugin(ScrollTrigger)
 function Appbar({ current }) {
-  const [active, setActive] = useState(false)
-  const handleClick = () => setActive(!active)
-
-  const handleScroll = () => {
-    const parentElement = document.querySelector(".page-wrapper")
-    if (!parentElement) return
-
-    const scrollTop = parentElement.scrollTop
-    const scrollHeight = parentElement.scrollHeight
-    const clientHeight = parentElement.clientHeight
-
-    // Calculate the scroll progress as a percentage.
-    const scrollProgress = (scrollTop / (scrollHeight - clientHeight)) * 100
-
-    const progressBar = document.querySelector(".scroll-progress")
-    if (progressBar) {
-      progressBar.style.width = `${scrollProgress}%`
-    }
-  }
+  const [mobileNavActive, setMobileNavActive] = useState(false)
+  const scrollContainer = document.getElementById("main-content")
+  const scrollProgress = useRef()
 
   useEffect(() => {
-    const parentElement = document.querySelector(".page-wrapper")
-    if (!parentElement) return
+    if (!scrollContainer && !scrollProgress.current) return
+    const ctx = GSAP.context(() => {
+      const progressTimeLine = GSAP.timeline({
+        scrollTrigger: {
+          trigger: scrollContainer,
+          scroller: "#main",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      })
 
-    parentElement.addEventListener("scroll", handleScroll)
+      progressTimeLine.from(scrollProgress.current, {
+        scaleX: 0,
+      })
+    })
 
-    return () => {
-      parentElement.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+    return () => ctx.revert()
+  }, [current])
 
   return (
     <>
-      <header className="header-wrapper">
-        <div className="header-main">
-          <div className="header-logo">
-            <img src="/Images/parsec-logo.png" />
+      <div
+        className="container fixed top-0 left-0 max-w-full backdrop-blur-sm bg-black bg-opacity-10"
+        style={{ zIndex: 100 }}
+      >
+        <div className="mx-auto max-w-page_lg flex items-center justify-between px-4 h-20">
+          <div className="md:w-1/4">
+            <img
+              src="/Images/parsec-logo.png"
+              alt="parsec logo"
+              className="sm:w-[200px] sm:h-[36px] w-[150px] h-[27px]"
+            />
           </div>
-          <div className="header-nav-menu">
-            <div className="header-nav-options">
-              <div
-                className={`nav-item ${
-                  current === "home" && "nav-item-active"
-                }`}
-              >
-                <Link to="/home">Home</Link>
-              </div>
-              <div
-                className={`nav-item ${
-                  current === "events" && "nav-item-active"
-                }`}
-              >
-                <Link to="/">Events</Link>
-              </div>
-              <div
-                className={`nav-item ${
-                  current === "team" && "nav-item-active"
-                }`}
-              >
-                <Link to="/">Team</Link>
-              </div>
+          <div className="nav-options-desktop flex items-center justify-end md:w-3/4 max-[768px]:hidden">
+            <div className="ml-4">
+              <Link to="/home">
+                <NavButton content="Home" isActive={current === "home"} />
+              </Link>
             </div>
-            <div className="header-mobile-nav">
-              <button
-                className={`nav-current ${active && "nav-current-active"}`}
-                onClick={handleClick}
-              >
-                <div>{current}</div>
-                <svg
-                  fill="#fff"
-                  height="12px"
-                  width="12px"
-                  version="1.1"
-                  id="Layer_1"
-                  viewBox="0 0 330 330"
-                >
-                  <path
-                    id="XMLID_225_"
-                    d="M325.607,79.393c-5.857-5.857-15.355-5.858-21.213,0.001l-139.39,139.393L25.607,79.393  c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393  s7.794-1.581,10.606-4.394l149.996-150C331.465,94.749,331.465,85.251,325.607,79.393z"
-                  />
-                </svg>
-              </button>
-              <div className={`nav-list ${active && "nav-list-active"}`}>
-                <ul>
-                  <li>
-                    <Link to="/home">Home</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Events</Link>
-                  </li>
-                  <li>
-                    <Link to="/">Team</Link>
-                  </li>
-                </ul>
-              </div>
+            <div className="ml-4">
+              <Link to="/events">
+                <NavButton content="Events" isActive={current === "events"} />
+              </Link>
             </div>
+            <div className="ml-4">
+              <Link to="/team">
+                <NavButton content="Team" isActive={current === "team"} />
+              </Link>
+            </div>
+          </div>
+          <div className="nav-mobile md:hidden">
+            <button
+              onClick={() => setMobileNavActive(!mobileNavActive)}
+              className={`rounded-full mr-4 text-4xl ${
+                mobileNavActive && "rotate-180"
+              } ease-in-out duration-300`}
+            >
+              <HiOutlineChevronDown />
+            </button>
           </div>
         </div>
-      </header>
-      <div className="progress-indicator-wrapper">
-        <div className="scroll-progress"></div>
+        <div
+          className={`nav-mobile-options h-0 overflow-hidden md:hidden ${
+            mobileNavActive && "h-48"
+          } ease-in-out duration-300`}
+          style={{ transformOrigin: "left top" }}
+        >
+          <div>
+            <Link to="/home">
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Home"
+                isActive={current === "home"}
+              />
+            </Link>
+          </div>
+          <div>
+            <Link to="/events">
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Events"
+                isActive={current === "events"}
+              />
+            </Link>
+          </div>
+          <div>
+            <Link to="/team">
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Team"
+                isActive={current === "team"}
+              />
+            </Link>
+          </div>
+        </div>
+        <div className="w-full" style={{ height: "2px" }}>
+          <div
+            className="h-full w-full bg-rose-500"
+            style={{ transformOrigin: "left top" }}
+            ref={scrollProgress}
+          ></div>
+        </div>
       </div>
     </>
   )

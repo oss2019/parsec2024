@@ -2,6 +2,8 @@ import Experience from "../Experience/Experience"
 import { useLocation } from "react-router-dom"
 import { Outlet } from "react-router-dom"
 import Appbar from "../Components/Appbar/Appbar"
+import Footer from "../Components/Footer/Footer"
+import useLenis from "../Helpers/lenis"
 
 function Layout() {
   const location = useLocation()
@@ -12,15 +14,21 @@ function Layout() {
     const segments = pathname.split("/")
     return segments[segments.length - 1]
   }
-
+  const route = getRouteName()
+  useLenis(route)
   return (
     <>
       <div className="experience">
         <Experience current={getRouteName()} />
       </div>
-      <div className="page-wrapper">
+      <div id="main-content">
         <Appbar current={getRouteName()} />
-        <Outlet />
+        <div>
+          <div>
+            <Outlet />
+          </div>
+        </div>
+        <Footer />
       </div>
     </>
   )

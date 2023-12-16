@@ -1,12 +1,11 @@
-import StaticParticles from "../Particles/StaticParticles/StaticParticles"
-import FBOMesh from "../Particles/FBOMesh/FBOMesh.jsx"
-import { Perf } from "r3f-perf"
+import StaticParticlesV2 from "../StaticParticles/StaticParticlesV2.jsx"
+import HomePageScene from "./HomePageScene.jsx"
 
 export default function Scene({ currentMesh }) {
   let componentToRender
   switch (currentMesh) {
     case "home":
-      componentToRender = <FBOMesh />
+      componentToRender = <HomePageScene />
       break
     default:
       componentToRender = <group />
@@ -14,8 +13,9 @@ export default function Scene({ currentMesh }) {
   }
   return (
     <>
-      {/* <Perf /> */}
-      <StaticParticles />
+      {/* <Perf position="bottom-left" /> */}
+      {/* <StaticParticles /> */}
+      <StaticParticlesV2 />
       {componentToRender}
     </>
   )

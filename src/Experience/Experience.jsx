@@ -1,5 +1,6 @@
 import { Canvas } from "@react-three/fiber"
 import Scene from "./Scene/Scene"
+import Camera from "./Camera/Camera"
 import { Effects } from "./Effects/Effects"
 import * as THREE from "three"
 
@@ -8,15 +9,18 @@ export default function Experience({ current }) {
     <>
       <Canvas
         className="canvas"
-        camera={{ position: [0, 0, 5] }}
         gl={{
-          powerPreference: "high-performance",
-          toneMapping: THREE.NoToneMapping,
+          alpha: true,
+          toneMapping: THREE.ACESFilmicToneMapping,
+          outputColorSpace: THREE.SRGBColorSpace,
         }}
         dpr={[1, 2]}
       >
-        <Effects />
+        <Camera />
         <Scene currentMesh={current} />
+        <color args={["#000000"]} attach="background" />
+        <Effects />
+        {/* <OrbitControls /> */}
       </Canvas>
     </>
   )
