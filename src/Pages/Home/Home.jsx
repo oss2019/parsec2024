@@ -63,14 +63,14 @@ function Home() {
         <section className="relative">
           <div id="animate-4">
             <div className="text-4xl md:text-5xl font-semibold font-hero text-center">
-              Our Sponcers
+              Our Sponsors
             </div>
             <div className="mt-10">
-              <Sponcer title={"Main Sponcers"}>
-                <SponcerCard imageUrl={"/Images/sponcers/nvidia.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/jetbrains.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/github.png"} />
-                <SponcerCard imageUrl={"/Images/sponcers/codingNinjas.png"} />
+              <Sponcer title={"Main Sponsors"}>
+                <SponcerCard imageUrl={"/Images/sponsors/nvidia.png"} />
+                <SponcerCard imageUrl={"/Images/sponsors/jetbrains.png"} />
+                <SponcerCard imageUrl={"/Images/sponsors/github.png"} />
+                <SponcerCard imageUrl={"/Images/sponsors/codingNinjas.png"} />
               </Sponcer>
             </div>
           </div>

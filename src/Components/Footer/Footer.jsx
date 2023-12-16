@@ -38,7 +38,7 @@ const Footer = () => {
         <div className="my-4 flex flex-col items-center justify-center">
           <div className="font-semibold text-xl">Support</div>
           <div className="mt-2">
-            <a href="mailto:outreach.parsec@iitdh.ac.in">sponcer parsec4.0</a>
+            <a href="mailto:outreach.parsec@iitdh.ac.in">sponsor parsec4.0</a>
           </div>
           <div className="mt-2">
             <a href="mailto:gstech@iitdh.ac.in">gstech@iitdh.ac.in</a>
