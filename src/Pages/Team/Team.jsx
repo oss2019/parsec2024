@@ -27,12 +27,12 @@ export default function Team() {
                     >
                       <div>
                         <img
-                          src={prefix + member.image}
+                          src={member.image}
                           alt={member.name}
                           width={200}
                           height={200}
                           className="memberImage"
-                          priority
+
                         />
                       </div>
                       <div className="memberInfo">
