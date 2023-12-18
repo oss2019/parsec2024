@@ -20,7 +20,7 @@ function Home() {
             </div>
           </div>
           <div className="relative">
-            <div className="max-w-[1000px] text-xl rounded-2xl mx-auto my-28 p-8 bg-black bg-opacity-80">
+            <div className="max-w-[1000px] text-xl rounded-2xl mx-auto my-28 p-8 bg-[#000006] bg-opacity-80">
               Witness the collision of genius minds and cutting-edge technology
               at IIT Dharwad's most electrifying{" "}
               <span className="gradient-text">Technical Fest - Parsec 4.0</span>

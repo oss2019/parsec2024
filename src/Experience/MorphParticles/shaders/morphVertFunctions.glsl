@@ -9,7 +9,8 @@ vec3 position_calc(vec3 pos, float time){
 
 float point_size(float distance_from_camera, float time){
   //float adjustedPointSize = 10.0 * pow(2.0, -distance_from_camera);
-  float adjustedPointSize = 2.0/distance_from_camera;
+  float exponent = 1.5;
+  float adjustedPointSize = clamp(3.0 * pow((distance_from_camera), -exponent), 0.1, 10.0);
   float size = uPointSize * adjustedPointSize;
   return size;
 }

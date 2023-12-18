@@ -1,8 +1,8 @@
-import React from "react";
-import "./Team.css";
-import teamsData from "./data";
+import React from "react"
+import TeamCard from "../../Components/TeamCard/TeamCard"
+import "./Team.css"
+import teamsData from "./data"
 
-const prefix = "";
 export default function Team() {
   return (
     <div className="teamBody">
@@ -20,90 +20,7 @@ export default function Team() {
               <h2 className="font-hero">{team.name}</h2>
               <div className="teamCardWrapper">
                 {team.members.map((member) => (
-                  <div key={member.name} className="teamCardContainer ">
-                    <div
-                      key={member.name}
-                      className="teamCard backdrop-blur-sm bg-white bg-opacity-10"
-                    >
-                      <div>
-                        <img
-                          src={member.image}
-                          alt={member.name}
-                          width={200}
-                          height={200}
-                          className="memberImage"
-
-                        />
-                      </div>
-                      <div className="memberInfo">
-                        <h3 style={{ font: "orbitron" }}>{member.name}</h3>
-                        <div className="memberLinks">
-                          <a
-                            href={`mailto:${member.email}`}
-                            className="linkImageWrapper email"
-                          >
-                            <img
-                              className="social-icon"
-                              src={prefix + "/Team/Logo/gmail1.png"}
-                              width={20}
-                              height={20}
-                              priority
-                              alt="Team Member Logo"
-                            />
-                          </a>
-                          {member.linkedin && (
-                            <a
-                              className="linkImageWrapper linkedin"
-                              href={member.linkedin}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                className="social-icon"
-                                src={prefix + "/Team/Logo/linkedin1.png"}
-                                width={20}
-                                height={20}
-                                priority
-                                alt="Link Image"
-                              />
-                            </a>
-                          )}
-                          {member.twitter && (
-                            <a
-                              className="linkImageWrapper twitter"
-                              href={member.twitter}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                className="social-icon"
-                                src={prefix + "/Team/Logo/twitter1.png"}
-                                width={20}
-                                height={20}
-                                priority
-                              />
-                            </a>
-                          )}
-                          {member.instagram && (
-                            <a
-                              className="linkImageWrapper instagram"
-                              href={member.instagram}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
-                              <img
-                                className="social-icon"
-                                src={prefix + "/Team/Logo/instagram.png"}
-                                width={20}
-                                height={20}
-                                priority
-                              />
-                            </a>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <TeamCard data={member} />
                 ))}
               </div>
             </div>
@@ -111,5 +28,5 @@ export default function Team() {
         </div>
       </div>
     </div>
-  );
+  )
 }
