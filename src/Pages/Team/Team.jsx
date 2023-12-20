@@ -15,12 +15,12 @@ export default function Team() {
               </h1>
             </div>
           </div>
-          {teamsData.map((team) => (
-            <div key={team.name} className="teamContainer">
+          {teamsData.map((team, index) => (
+            <div key={index} className="teamContainer">
               <h2 className="font-hero">{team.name}</h2>
               <div className="teamCardWrapper">
-                {team.members.map((member) => (
-                  <TeamCard data={member} />
+                {team.members.map((member, index) => (
+                  <TeamCard data={member} key={index} />
                 ))}
               </div>
             </div>
