@@ -49,7 +49,7 @@
 .teamCardWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .teamCardContainer {
@@ -99,4 +99,10 @@
 .linkImageWrapper:hover .social-icon {
   transform: scale(1.5);
   transition: all 0.2s ease-out;
+}
+
+@media only screen and (max-width: 640px) {
+  .teamWrapper {
+    width: calc(100% - 80px);
+  }
 }

@@ -18,9 +18,8 @@ export default function Experience({ current }) {
       >
         <Camera />
         <Scene currentMesh={current} />
-        <color args={["#000000"]} attach="background" />
+        <color args={["#000006"]} attach="background" />
         <Effects />
-        {/* <OrbitControls /> */}
       </Canvas>
     </>
   )

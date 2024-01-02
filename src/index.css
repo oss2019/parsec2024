@@ -17,12 +17,12 @@
 :root {
   --primary-color: #2390f7;
   --main: #27272a;
-  --default: hsl(240 4% 46%);
+  --default-dark: 240 4% 46%;
 }
 
 body {
   color: #fff;
-  background-color: #000;
+  background-color: #000006;
   font-family: "Open Sans", sans-serif;
 }
 
