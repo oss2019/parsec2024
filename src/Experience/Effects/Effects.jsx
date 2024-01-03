@@ -14,7 +14,7 @@ export const Effects = () => {
           intensity={1.5} // The bloom intensity.
           blurPass={undefined} // A blur pass.
           luminanceThreshold={0.5} // luminance threshold. Raise this value to mask out darker elements in the scene.
-          luminanceSmoothing={0.7} // smoothness of the luminance threshold. Range is [0, 1]
+          luminanceSmoothing={0.5} // smoothness of the luminance threshold. Range is [0, 1]
           mipmapBlur={true} // Enables or disables mipmap blur.
           height={300}
         />

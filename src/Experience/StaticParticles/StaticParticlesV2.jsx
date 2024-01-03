@@ -12,7 +12,7 @@ function StaticParticlesV2() {
     new THREE.MeshStandardMaterial()
   )
   const meshes = [sphere]
-  const pointsCount = 10
+  const pointsCount = 15
   const pointsRef = useRef()
   const localRef = useRef()
   const globalRef = useRef()
@@ -95,8 +95,8 @@ function StaticParticlesV2() {
             pointsFragFunctions={fragFunctions}
             pointsCount={pointsCount}
             baseColor="#ff0000"
-            pointSize={1}
-            alpha={0.5}
+            pointSize={10}
+            alpha={1.0}
             ref={pointsRef}
           />
         </group>

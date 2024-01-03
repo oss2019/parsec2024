@@ -318,7 +318,7 @@ function Morph() {
             scale={[1.7, 1.7, 1.7]}
             pointSize={10}
             pointsCount={100}
-            alpha={1.0}
+            alpha={1.2}
           />
         </group>
       </group>
