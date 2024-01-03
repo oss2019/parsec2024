@@ -12,7 +12,19 @@ const teamsData = [
       },
     ],
   },
-
+  {
+    name: "HEAD OF FINANCE",
+    members: [
+      {
+        name: "SHUBH AGARWAL",
+        image: "https://drive.google.com/uc?id=1VjDo8BhiRBHX4ckyCRhd8QV4zepz3RpZ",
+        email: "210020047@iitdh.ac.in",
+        linkedin: "https://www.linkedin.com/in/shubhagarwal3110",
+        twitter: "",
+        instagram: "https://www.instagram.com/_shubhag_",
+      },
+    ],
+  },
   {
     name: "WEB-TEAM",
     members: [
@@ -24,22 +36,22 @@ const teamsData = [
         twitter: "",
         instagram: "https://www.instagram.com/vedan.obs/",
       },
-      // {
-      //   name: "XYZ",
-      //   image: "/Team/xyz.jpg",
-      //   email: "",
-      //   linkedin: "https://in.linkedin.com/in/narendramodi",
-      //   twitter: "https://twitter.com/elonmusk/",
-      //   instagram: "",
-      // },
-      // {
-      //   name: "XYZ",
-      //   image: "/Team/xyz.jpg",
-      //   email: "",
-      //   linkedin: "",
-      //   twitter: "https://youtu.be/dQw4w9WgXcQ",
-      //   instagram: "https://www.instagram.com/virat.kohli/",
-      // },
+      {
+        name: "XYZ",
+        image: "/Team/xyz.jpg",
+        email: "",
+        linkedin: "https://in.linkedin.com/in/narendramodi",
+        twitter: "https://twitter.com/elonmusk/",
+        instagram: "",
+      },
+      {
+        name: "XYZ",
+        image: "/Team/xyz.jpg",
+        email: "",
+        linkedin: "",
+        twitter: "https://youtu.be/dQw4w9WgXcQ",
+        instagram: "https://www.instagram.com/virat.kohli/",
+      },
     ],
   },
 
@@ -132,29 +144,6 @@ const teamsData = [
   //     },
   //   ],
   // },
-
-  {
-    name: "HEAD OF FINANCE",
-    members: [
-      {
-        name: "SHUBH AGARWAL",
-        image: "https://drive.google.com/uc?id=1VjDo8BhiRBHX4ckyCRhd8QV4zepz3RpZ",
-        email: "210020047@iitdh.ac.in",
-        linkedin: "https://www.linkedin.com/in/shubhagarwal3110",
-        twitter: "",
-        instagram: "https://www.instagram.com/_shubhag_",
-      },
-      // {
-      //   name: "XYZ",
-      //   image: "/Team/xyz.jpg",
-      //   email: "",
-      //   linkedin: "",
-      //   twitter: "",
-      //   instagram: "",
-      // },
-    ],
-  },
-
   {
     name: "DESIGN TEAM",
     members: [
