@@ -90,7 +90,7 @@ function Home() {
                     rounded-lg 
                     p-4 my-8 
                     relative
-                    bg-pink-600
+                    bg-pink-600/80
                     pink-shadow
                   "
                 >
@@ -109,7 +109,7 @@ function Home() {
                     my-8 
                     relative 
                     overflow-hidden
-                    bg-amber-500
+                    bg-amber-500/80
                     yellow-shadow
                   "
                 >
@@ -128,7 +128,7 @@ function Home() {
                     p-4 
                     my-8 
                     relative
-                    bg-violet-600
+                    bg-violet-600/80
                     violet-shadow 
                   "
                 >
