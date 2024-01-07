@@ -63,6 +63,14 @@ function Appbar({ current }) {
                 <NavButton content="Team" isActive={current === "team"} />
               </Link>
             </div>
+            {/* <div className="ml-4">
+              <Link to="/cultural">
+                <NavButton
+                  content="Cultural"
+                  isActive={current === "cultural"}
+                />
+              </Link>
+            </div> */}
           </div>
           <div className="nav-mobile md:hidden">
             <button
@@ -108,6 +116,15 @@ function Appbar({ current }) {
               />
             </Link>
           </div>
+          {/* <div>
+            <Link to="/cultural">
+              <NavTile
+                onClick={() => setMobileNavActive(false)}
+                content="Cultural Events"
+                isActive={current === "cultural"}
+              />
+            </Link>
+          </div> */}
         </div>
         <div className="w-full" style={{ height: "2px" }}>
           <div
