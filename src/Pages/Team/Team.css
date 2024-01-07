@@ -39,7 +39,8 @@
   margin-top: 4rem;
 }
 
-.teamContainer h2 {
+.teamContainer h2,
+h3 {
   font-size: 30px;
   text-align: center;
   color: white;
