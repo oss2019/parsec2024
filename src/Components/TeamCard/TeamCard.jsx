@@ -29,6 +29,12 @@ const TeamCard = ({ data }) => {
           backgroundPosition: "center center",
         }}
       ></div> */}
+      {data.subtitle && (
+        <div className="absolute w-full text-center bottom-[-40px] font-hero">
+          Subtitle
+        </div>
+      )}
+
       <div
         className="
           flex 
