@@ -4,7 +4,7 @@ const data = [
     content:
       "DevHack 5.0, the next edition of the annual hackathon of IIT Dharwad is back - bigger, better and bolder! We have always believed that engineers and researchers have the power to revolutionize the world by transforming their inspiring ideas into solutions that positively impact society. Prove your worth in this 36-hour hackathon by ideating, innovating and hacking meaningful solutions to real life problems.",
     image: "/Images/Events/DevHack.jpg",
-    registrationLink: "",
+    registrationLink: "http://bit.ly/3vlE9LH",
     location: "PC IIT Dharwad",
     timing: "2 Feb, 2:00 PM",
   },
@@ -30,7 +30,8 @@ const data = [
     heading: "Tetris Trades",
     content: `PARSEC 4.0, the annual technological symposium hosted by IIT Dharwad, presents Investor Summit the Mock Trading Competition—an intellectually challenging online mock-stock event meticulously designed to assess participants' investment acumen in the volatile financial markets. `,
     image: "/Images/Events/TetrisTrades.jpg",
-    registrationLink: "",
+    registrationLink:
+      "https://unstop.com/competitions/tetris-trades-parsec-40-indian-institute-of-technology-iit-dharwad-845420",
     location: "Online",
     timing: "26 Jan - 2 Feb",
   },
