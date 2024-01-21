@@ -63,14 +63,14 @@ function Appbar({ current }) {
                 <NavButton content="Team" isActive={current === "team"} />
               </Link>
             </div>
-            {/* <div className="ml-4">
+            <div className="ml-4">
               <Link to="/cultural">
                 <NavButton
                   content="Cultural"
                   isActive={current === "cultural"}
                 />
               </Link>
-            </div> */}
+            </div>
           </div>
           <div className="nav-mobile md:hidden">
             <button
@@ -85,7 +85,7 @@ function Appbar({ current }) {
         </div>
         <div
           className={`nav-mobile-options h-0 overflow-hidden md:hidden ${
-            mobileNavActive && "h-48"
+            mobileNavActive && "h-60"
           } ease-in-out duration-300`}
           style={{ transformOrigin: "left top" }}
         >
@@ -116,7 +116,7 @@ function Appbar({ current }) {
               />
             </Link>
           </div>
-          {/* <div>
+          <div>
             <Link to="/cultural">
               <NavTile
                 onClick={() => setMobileNavActive(false)}
@@ -124,7 +124,7 @@ function Appbar({ current }) {
                 isActive={current === "cultural"}
               />
             </Link>
-          </div> */}
+          </div>
         </div>
         <div className="w-full" style={{ height: "2px" }}>
           <div
