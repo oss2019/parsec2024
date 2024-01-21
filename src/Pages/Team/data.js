@@ -5,7 +5,7 @@ const teamsData = [
       {
         name: "AGRIM JAIN",
         image:
-          "https://drive.google.com/uc?id=1EXCYefe-Kd6X8rrX0HPsZGkgxL-ZCy0i",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYS2FfAi9r96fsqnjyOUUV_pTpR9uKI2Kn4H5-w4aBBQQIk4yMJ0kTfmcR-gw9Fhce-x1OURU9tue9zEXNe_xybhts0UWg=w1920-h961",
         email: "210010003@iitdh.ac.in",
         linkedin: "https://www.linkedin.com/in/agrim-jain-6b9356234/",
         twitter: "",
@@ -19,7 +19,7 @@ const teamsData = [
       {
         name: "SHUBH AGARWAL",
         image:
-          "https://drive.google.com/uc?id=1VjDo8BhiRBHX4ckyCRhd8QV4zepz3RpZ",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYRzXSlH2GQA3KS2ul27TWhCFs1lg8A0uNY-fLFi0xyITl-9Iwbp_kGZhAox4biYb_rMdojenSc99xy3JnAeRRk6NOwbVw=w1920-h961",
         email: "210020047@iitdh.ac.in",
         linkedin: "https://www.linkedin.com/in/shubhagarwal3110",
         twitter: "",
@@ -33,7 +33,8 @@ const teamsData = [
     members: [
       {
         name: "VARUN LIMAYE",
-        image: "/Images/Team/Varun_limaye.jpg",
+        image:
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYSzMzcpKpXC-QztIYcsx7dh8oNsbqj7UhGg7K-H2WVAy0W8i_J6o0V3gr4yL01yCVrBXl7FE0vZWjkHHOHUYxEKHH1dng=w1920-h961",
         email: "210030045@iitdh.ac.in",
         linkedin: "",
         twitter: "",
@@ -48,7 +49,7 @@ const teamsData = [
       {
         name: "GURVIR SINGH",
         image:
-          "https://drive.google.com/uc?id=1fo9h0ogSZeSGenwLAYbfGHw4sEVAdGSf",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYRbNACUMURsNS1UqcN6e-z90IRdbwm8A8qJQIc2UcWj2y3LxNx658U2N9wNeT59pCvoZxSALAgbALVZbz9D8a4bzVu28g=w1920-h961",
         email: "210020012@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/gurvirbhatti?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
@@ -73,7 +74,7 @@ const teamsData = [
       {
         name: "VEDANT GHONGE",
         image:
-          "https://drive.google.com/uc?id=1zzBJsr7sVRQx74T4Nj05OPNWeWwAVbCS",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYTP39-jrZgu_g3UaLHzkGKX1o7ijsHYezyISR01sWOEBKAOHPZiF5wQOvm4htd2L8oW8D94MO0LQf8TM3wctSVXsIiTDw=w1920-h961",
         email: "200030020@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/vedant-ghonge-60119b209?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -83,7 +84,7 @@ const teamsData = [
       {
         name: "UTKARSH GUPTA",
         image:
-          "https://drive.google.com/uc?id=1xa0ggya4rI--8bNQFMAkzXkJ-gTZKR6d",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYReHynN2nst9jIFI3D37xUUvPUquWnEM9xH4FeHzYbyAEUMyWMbQZ8q2g1U3LpPe1RZw097jvXOJWfB6dTfCEvIHB3MOA=w1920-h961",
         email: "220020056@iitdh.ac.in",
         linkedin: "https://www.linkedin.com/in/utkarsh-gupta-812308270/",
         twitter: "https://youtu.be/dQw4w9WgXcQ",
@@ -92,7 +93,7 @@ const teamsData = [
       {
         name: "SHASHWAT SHOURYA",
         image:
-          "https://drive.google.com/uc?id=14OuerpMEPizBT5Vldec2cDtqO2LJ-3b6",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYTvXULp3Lr5BRbvv3I13-BeIXyczuCtENFGGmUfc4Ux4v3g2iRpmsWCcd6PurmZ1-jvjl_Qc7y2Cj_o-GLBAUVbQ1gB=w1920-h961",
         email: "220110008@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/shashwat-shourya-3b0812226?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -104,7 +105,7 @@ const teamsData = [
       {
         name: "AKELLA SREENIVASU",
         image:
-          "https://drive.google.com/uc?id=1P-a5t-VlTIByEUjTugjQCUjoY3MkPD_P",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYQr57qSiJmOc6aiAMSNM4o3zEl_XwuOL3ZxyS1g6zGh4hzWF9J30BTY6QDNss30iYS9zIWquLdfXOV0__dbsabkajeohw=w1920-h961",
         email: "210020001@iitdh.ac.in",
         linkedin: "https://www.linkedin.com/in/akella-v-s-sreenivasu-639686269",
         twitter: "https://youtu.be/dQw4w9WgXcQ",
@@ -120,7 +121,7 @@ const teamsData = [
       {
         name: "ANVAY JAYKAR",
         image:
-          "https://drive.google.com/uc?id=1wdCseRCMO2fyf-wCIBWwnl_DC9SQbYLM",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYR0CU0OphRlR16oIY9TYg1NHLwwFASfKF9kWCKVIywU9FUcleJfORVjhu9FwUSEUWeBGWp1J0QSbw9oJwy2mZQ6MCEx=w1920-h961",
         email: "220010023@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/anvay-jaykar-7b3974267?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -130,7 +131,7 @@ const teamsData = [
       {
         name: "ATHARVA TIJARE",
         image:
-          "https://drive.google.com/uc?id=1fEb_s4FkDzoMVR7STpxpDWYpoaWoRPDn",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYR_x7059MedPyNk_SPJVzks1ze36jg9cLnptKaXbAj7Gvc1xrTpXyqr6FZRO__uiPu012hL8sxJ6w0W4fdxEB5brejnzw=w1920-h961",
         email: "220010007@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/atharva-virendra-tijare-b0a926258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -141,7 +142,7 @@ const teamsData = [
       {
         name: "UPAKRAMANIKA BISHNU",
         image:
-          "https://drive.google.com/uc?id=1gJ3mqjgKFSdAjskcL58vpt2je0Z9evpa",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYRCiJF9I6pjbZA-MuXLpSgWgfDEPLL9YgkgKGKDCQMxpeV63i64gR2Pujkam28fvmv0mIK-aJ2xSWAhKNhR4EURF6lC=w1920-h961",
         email: "225100039@iitdh.ac.in",
         linkedin: "https://www.linkedin.com/in/upakramanika-bishnu-339901254/",
         twitter: "",
@@ -151,7 +152,7 @@ const teamsData = [
       {
         name: "AAYUSH VATS",
         image:
-          "https://drive.google.com/uc?id=1Uk7zNFnlJES3gJphS6dOlxqt3_rCrtZN",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYSDapjBgteFBU030dwxDsUwbp99uFnHIt8Drus3y0HsrjHftAeLxfxVmVjYVdqBT9Uryz7GxM6nhD-oZ1gVW_I-cE_3qA=w1920-h961",
         email: "220010001@iitdh.ac.in",
         linkedin: "http://www.linkedin.com/in/aayush-vats-451b6b269",
         twitter: "",
@@ -161,7 +162,7 @@ const teamsData = [
       {
         name: "GAURAV SINGHAL",
         image:
-          "https://drive.google.com/uc?id=1_wwsMt-Mf5GrconbLTwwqHt4MwHiyiAs",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYTkt6KuKDkLgNGmliL5-4VC4fF5vp4K1SUvkN8k_2ldAQQ2JAmvjVPsDa8-ZKnXVfyPvUwh3sHcx7ezdMnBhxEF8zIu=w1920-h961",
         email: "220090014@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/gaurav-singhal-5b0805265?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -169,18 +170,20 @@ const teamsData = [
         instagram:
           "https://www.instagram.com/gauravsinghal111?igsh=MXh3dGNlcnZ6ZmpwZg==",
       },
-      // {
-      //   name: "AYUSH SINGHI",
-      //   image: "https://drive.google.com/uc?id=1DllCfwI5MfEuRg6ObwHiE9o8p4lTl9Kh",
-      //   email: "210020048@iitdh.ac.in",
-      //   linkedin: "",
-      //   twitter: "",
-      //   instagram: "https://www.instagram.com/ayush_singhi_12?igsh=MTRqbG4xNDVwemowNQ==",
-      // },
+      {
+        name: "AYUSH SINGHI",
+        image:
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYQflT0O2z28IWRdJVLPsyZzLc5ymQpxKLuOLM-4DRlo2mDiejg534cuCZVekpgwTDmWaErPTHu9HYrSlgKorl4RKfwbAw=w1920-h961",
+        email: "210020048@iitdh.ac.in",
+        linkedin: "",
+        twitter: "",
+        instagram:
+          "https://www.instagram.com/ayush_singhi_12?igsh=MTRqbG4xNDVwemowNQ==",
+      },
       {
         name: "ANJALI KATAGERI",
         image:
-          "https://drive.google.com/uc?id=1o1p3T-W-rY8hO8D0oR5fo2_sv3nKQCgT",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYSfe995E6Tds_VMIJuMuEwFSjO03v6WMBUYIct3gS_avVaGdrUNxJDRVmD_bBkmEvCPivFURnV8WnaSUpxj1AhMjsKB-g=w1920-h961",
         email: "225100018@iitdh.ac.in",
         linkedin: "",
         twitter: "",
@@ -216,9 +219,20 @@ const teamsData = [
     name: "SPONSORSHIP TEAM",
     members: [
       {
+        name: "VEMULA CHANDRAHAAS REDDY",
+        image:
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYTBT_U5oQl33NDW8VqeFJiDcEObJxkHq3SiVbnyE8eEkyxp_EwK2NB2HhWmfgpCQikMeS7xtpoY708U4Du8L4D_iff0rw=w1920-h961",
+        email: "220010062@iitdh.ac.in",
+        linkedin:
+          "https://www.linkedin.com/in/chandrahaas-reddy-2507472a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        twitter: "",
+        instagram:
+          "https://www.instagram.com/charan_1701?igsh=bTNnNmNuOHlid3Rt&utm_source=qr",
+      },
+      {
         name: "OM DESHMUKH",
         image:
-          "https://drive.google.com/uc?id=1B_ZcLB4x3aIw-AevH2pTZs4S8xLD218Y",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYSIfvIZEJ65iIGjaGqflRqwTnC9OdqI9IdqJfn28N01yLCKSMOQ17Hrlf-MjCwX0wvtAw7ULiXBzzgKFt0RwjQ41S0k5Q=w1920-h961",
         email: "210010033@iitdh.ac.in",
         linkedin: "",
         twitter: "",
@@ -227,7 +241,7 @@ const teamsData = [
       {
         name: "SAI DHRUTHI K V L ",
         image:
-          "https://drive.google.com/uc?id=1AkZAo9COxgwyhQVMTs8vEqD7i5HvRVcJ",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYQsGHGOr1NJ5sqy3EKMQnfw0IKbU4I7aoHcq1Hxn8YutF0uXCjP2Q7FftkOUVJkJnW5SBi00ed5N6fPANTjJ7k0iwBk2Q=w1920-h961",
         email: "220090012@iitdh.ac.in",
         linkedin: "http://www.linkedin.com/in/sai-dhruthi-k-v-l-890337260",
         twitter: "",
@@ -237,7 +251,7 @@ const teamsData = [
       {
         name: "PRANAV KUMAR PANDEY",
         image:
-          "https://drive.google.com/uc?id=1yaWXyHC-C_wCnVbbBjdezjeDTqjnrdDr",
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYRDOWtnA1Gh0T5TVwkc7euf6whgxYvqJwa5RQN1y4R70d2XUMsh3F71z5IxDIL3Rn720dXi5SQgQxM1hSRh1vnkvgHWqw=w1920-h961",
         email: "220010043@iitdh.ac.in",
         linkedin:
           "https://www.linkedin.com/in/pranav-kumar-pandey-001388250?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -248,28 +262,21 @@ const teamsData = [
     ],
   },
 
-  // {
-  //   name: "ARTIFICIAL INTELLIGENCE TEAM",
-  //   members: [
-  //     {
-  //       name: "SRIHARI K G",
-  //       image:
-  //         "https://drive.google.com/uc?id=1g3zcSs6FC9t7VIApLjACAapgrG4KAnnI",
-  //       email: "210030035@iitdh.ac.in",
-  //       linkedin: "https://www.linkedin.com/in/srihari-k-g-91931a1ab/",
-  //       twitter: "",
-  //       instagram: "https://www.instagram.com/srihari_k_g_2003/",
-  //     },
-  //     // {
-  //     //   name: "XYZ",
-  //     //   image: "/Team/xyz.jpg",
-  //     //   email: "",
-  //     //   linkedin: "",
-  //     //   twitter: "",
-  //     //   instagram: "",
-  //     // },
-  //   ],
-  // },
+  {
+    name: "SOCIAL MEDIA TEAM",
+    members: [
+      {
+        name: "ADITYA SHARMA",
+        image:
+          "https://lh3.googleusercontent.com/u/1/drive-viewer/AEYmBYS0W83ttQZTA76J5Z9sR994aFuBXWZyiwwEU2m3dk3jmSxP7Y_vjhBaFJKbcXKqwzLh8vFU3OedoC8oW695cUFEiR1w=w1920-h961",
+        email: "225100002@iitdh.ac.in",
+        linkedin:
+          "https://www.linkedin.com/in/aditya-sharma-8095491a2?trk=contact-info",
+        twitter: "",
+        instagram: "https://www.instagram.com/adtyshrma?igsh=OHl6M2lwMHEwaG8z",
+      },
+    ],
+  },
 
   // {
   //   name: "ALGOSTRIKE TEAM",
