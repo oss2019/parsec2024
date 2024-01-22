@@ -31,17 +31,17 @@ export default function EventCard({ flipLayout = false, data }) {
                   <div className="text-sm mt-2">{data.content}</div>
                 </div>
 
-                <div className="text-xs mt-4">
+                <div className="text-s mt-2">
                   <div className="flex flex-wrap items-center">
                     <div>
                       <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
                         <IoLocationSharp />
                         <span className="ml-2">{data.location}</span>
                       </span>
-                      <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
+                      {/* <span className="flex py-1 px-2 items-center rounded-full bg-blue-500/90 my-2">
                         <FaClock />
                         <span className="ml-2">{data.timing}</span>
-                      </span>
+                      </span> */}
                     </div>
                   </div>
 
