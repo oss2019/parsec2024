@@ -67,10 +67,12 @@ function Home() {
             </div>
             <div className="mt-10">
               <Sponcer title={"Main Sponsors"}>
-                <SponcerCard imageUrl={"/Images/sponsors/nvidia.png"} />
-                <SponcerCard imageUrl={"/Images/sponsors/jetbrains.png"} />
-                <SponcerCard imageUrl={"/Images/sponsors/github.png"} />
-                <SponcerCard imageUrl={"/Images/sponsors/codingNinjas.png"} />
+                <SponcerCard
+                  imageUrl={"/Images/sponsors/big_mishra_logo.png"}
+                />
+                <SponcerCard imageUrl={"/Images/sponsors/myle_logo).png"} />
+                {/* <SponcerCard imageUrl={"/Images/sponsors/github.png"} />
+                <SponcerCard imageUrl={"/Images/sponsors/codingNinjas.png"} /> */}
               </Sponcer>
             </div>
           </div>
